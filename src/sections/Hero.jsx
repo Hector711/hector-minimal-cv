@@ -6,14 +6,11 @@ export default function Hero() {
     <Section>
       <div class='container'>
         <div class='info'>
-          <h1>NAME</h1>
-          <h2>full</h2>
+          <h1>Héctor Guerra</h1>
+          <h2>Full Stack Programmer</h2>
           <span>
-            <div>
-            </div>
-            <div>
-              city,region
-            </div>
+            <div></div>
+            <div>Madrid, Spain.</div>
           </span>
           <footer id='print'>
             <p>Email: </p>
