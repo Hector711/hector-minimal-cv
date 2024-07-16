@@ -1,47 +1,31 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 :root {
-  background-color: var(--softWhite);
-
+  font-family: 'Onest Variable', 'Figtree Variable', Avenir, Helvetica, Arial,
+  sans-serif;
+  /* background-color: var(--white-1); */
+  background-color: var(--blue-0);
+  color: var(--white-0);
+  --width: 800px;
   --green: #02ca34;
 
-  --white: #ffffff;
-  --softWhite: #e9e9e9;
-
-  --light: #d2d2d2;
-
-  --softGrey: #7b7b7b;
-  --darkGrey: #4b4b4b;
-
-  --black: #393939;
-
   --white-0: #ffffff;
-  --white-1: #dedede;
-  --softGrey: #7b7b7b;
-  --darkGrey: #4b4b4b;
+  --white-1: #e6e6e6;
+  --white-2: #909090;
+  --white-3: #565656;
 
-  --black-0: #000000;
-  --black-1: #101010;
+  --black-0: #131416;
+  --black-1: #121212;
+  --blue-0: #101822;
 
-  --color-main-0: #134379;
-  --color-main-1: #1b5faa;
+  --border-s: 5px;
+  --border-m: 8px;
+  --border-l: 20px;
 
-  --color-sec-0: #ffc20e;
-  --color-sec-1: #ffe390;
+  --gap-s: 8px;
+  --gap-m: 10px;
+  --gap-l: 15px;
 
-  --border-s: 6px;
-  --border-m: 10px;
-  --border-l: 40px;
-  --border-xl: 40px;
-
-  --shadow-xs: 0px 1px 2px #29292980;
-  --shadow-s: 0 0 5px 0 #6c6b6bed;
-  --shadow-m: 2px 0 10px 0 #212121ed;
-  --shadow-l: 2px 0 10px #212121ed;
+  --pad-s: 0.8rem;
+  --pad-m: 1rem;
+  --pad-l: 1.2rem;
 }
 
-* {
-  /* border: 0.5px solid black; */
-}

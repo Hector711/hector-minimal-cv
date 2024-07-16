@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <main class="animate-fade-in-up">
+      <main className="animate-fade-in-up">
         <Hero />
         <About />
         <Projects />

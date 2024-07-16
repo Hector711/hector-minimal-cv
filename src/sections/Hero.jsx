@@ -1,11 +1,29 @@
 import React from 'react';
 import Section from '@/sections/components/Section';
+import X from '@/assets/X.jsx';
+import Instagram from '@/assets/Instagram.jsx';
+import YouTube from '@/assets/YouTube.jsx';
+import WhatsApp from '@/assets/WhatsApp.jsx';
+import Mail from '@/assets/Mail.jsx';
+import LinkedIn from '@/assets/LinkedIn.jsx';
+import cv from '@/../cv-es.json';
+
+const basics = cv.basics;
+
+const SOCIAL_ICONS = {
+  instagram: <Instagram />,
+  youtube: YouTube,
+  whatsapp: WhatsApp,
+  mail: Mail,
+  linkedin: LinkedIn,
+};
+
 
 export default function Hero() {
   return (
     <Section>
-      <div class='container'>
-        <div class='info'>
+      <div className='container'>
+        <div className='info'>
           <h1>Héctor Guerra</h1>
           <h2>Full Stack Programmer</h2>
           <span>
@@ -19,41 +37,9 @@ export default function Hero() {
             <p>GitHub: </p>
           </footer>
           <footer id='no-print'>
-            <div id='profiles'>
-              {/* {email && (
-                <a
-                  href={'mailto'}
-                  title={'Enviar un correo electrónico a nickname al correo email'}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  icon
-                </a>
-              )}
-              {phone && (
-                <a
-                  href={`tel:${phone}`}
-                  title={`Llamar por teléfono a ${nickname} al número ${phone}`}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  icon
-                </a>
-              )}
-              {profiles.map(({ network, url }) => {
-                const Icon = SOCIAL_ICONS[network];
-
-                return (
-                  <a
-                    href={url}
-                    title={`Visitar el perfil de ${nickname} en ${network}`}
-                    target='_blank'
-                    rel='noopener noreferrer'
-                  >
-                    <Icon />
-                  </a>
-                );
-              })} */}
+            <div id='rrss-links'>
+              {console.log(basics)}
+             
             </div>
             <a
               id='webPage'
