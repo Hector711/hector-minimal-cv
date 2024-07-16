@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom/client';
 import App from './App.jsx';
 // TYPOGRAPHY
 
+// SECTIONS
+import '@/css/section-hero.css';
+
 // CSS
 import '@/css/0/reset.css';
 import '@/css/init.css';

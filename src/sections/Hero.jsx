@@ -65,8 +65,8 @@ export default function Hero() {
             </a>
           </footer>
         </div>
-        <figure>
-          {/* <Image id='img' src={image} width='140' height='140' alt={name} /> */}
+        <figure id='avatar'>
+          <img src="https://i.ibb.co/s5smtmL/profile-pic.jpg" alt="Héctor Avatar" />
         </figure>
       </div>
     </Section>
