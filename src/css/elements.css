@@ -58,11 +58,6 @@ ul {
   list-style: none;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
 span {
   display: flex;
   align-items: center;
