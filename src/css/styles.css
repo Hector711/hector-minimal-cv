@@ -1,9 +1,14 @@
 :root {
-  font-family: 'Onest Variable', 'Figtree Variable', Avenir, Helvetica, Arial,
-  sans-serif;
-  /* background-color: var(--white-1); */
-  background-color: var(--blue-0);
-  color: var(--white-0);
+  font-family: 
+  'Nunito Sans Variable',
+    'Onest Variable',
+    'Figtree Variable',
+    Avenir,
+    Helvetica,
+    Arial;
+  background-color: var(--white-1);
+  color: var(--black-2);
+
   --width: 800px;
   --green: #02ca34;
 
@@ -12,9 +17,9 @@
   --white-2: #909090;
   --white-3: #565656;
 
-  --black-0: #131416;
-  --black-1: #121212;
-  --blue-0: #101822;
+  --black-0: #000000;
+  --black-1: #3a3a3a;
+  --black-2: #838383;
 
   --border-s: 5px;
   --border-m: 8px;
@@ -29,3 +34,47 @@
   --pad-l: 1.2rem;
 }
 
+
+@media print {
+  #no-print {
+    display: none !important;
+  }
+}
+
+#print {
+  display: none !important;
+  font-size: 0.9rem;
+  color: var(--softGrey);
+}
+
+
+@media print {
+  #print {
+    display: block !important;
+  }
+  html {
+    background-color: var(--totalWhite) !important;
+  }
+  p,
+  span,
+  h2,
+  time {
+    color: var(--darkGrey) !important;
+  }
+  article p {
+    width: 550px !important;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  main {
+    padding-inline: 2rem;
+    padding-block: 3rem;
+  }
+  #arrow {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 4px;
+  }
+}

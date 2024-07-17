@@ -1,18 +1,20 @@
 import * as React from 'react';
 
-export default function X(props) {
+export default function Mail(props) {
   return (
     <svg
+      viewBox='0 0 24 24'
       fill='none'
       strokeWidth={1.7}
       strokeLinecap='round'
       strokeLinejoin='round'
-      viewBox='1 1 22 22'
       {...props}
-      id='x'
+      className='icons stroke'
+
     >
       <path d='M0 0h24v24H0z' stroke='none' />
-      <path d='M4 4l11.733 16H20L8.267 4zM4 20l6.768-6.768m2.46-2.46L20 4' />
+      <path d='M3 7a2 2 0 012-2h14a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V7z' />
+      <path d='M3 7l9 6 9-6' />
     </svg>
   );
 }

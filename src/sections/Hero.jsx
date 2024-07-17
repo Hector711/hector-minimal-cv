@@ -1,60 +1,70 @@
 import React from 'react';
 import Section from '@/sections/components/Section';
-import X from '@/assets/X.jsx';
-import Instagram from '@/assets/Instagram.jsx';
-import YouTube from '@/assets/YouTube.jsx';
-import WhatsApp from '@/assets/WhatsApp.jsx';
-import Mail from '@/assets/Mail.jsx';
-import LinkedIn from '@/assets/LinkedIn.jsx';
+import X from '@/assets/icons/X.jsx';
+import Instagram from '@/assets/icons/Instagram.jsx';
+import YouTube from '@/assets/icons/YouTube.jsx';
+import WhatsApp from '@/assets/icons/WhatsApp.jsx';
+import Mail from '@/assets/icons/Mail.jsx';
+import LinkedIn from '@/assets/icons/LinkedIn.jsx';
+import Location from '@/assets/icons/Location.jsx';
+import GitHub from '@/assets/icons/GitHub.jsx';
 import cv from '@/../cv-es.json';
 
 const basics = cv.basics;
-
-const SOCIAL_ICONS = {
-  instagram: <Instagram />,
-  youtube: YouTube,
-  whatsapp: WhatsApp,
-  mail: Mail,
-  linkedin: LinkedIn,
-};
-
+const rrss = basics.rrss;
 
 export default function Hero() {
+  const SOCIAL_ICONS = {
+    'Instagram': <Instagram /> ,
+    'YouTube': <YouTube />,
+    'WhatsApp': <WhatsApp />,
+    'Mail': <Mail />,
+    'LinkedIn': <LinkedIn />,
+    'GitHub': <GitHub />,
+    'X': <X />,
+  };
   return (
-    <Section>
-      <div className='container'>
+    <Section id='hero'>
         <div className='info'>
           <h1>Héctor Guerra</h1>
           <h2>Full Stack Programmer</h2>
           <span>
-            <div></div>
+            <Location />
             <div>Madrid, Spain.</div>
           </span>
           <footer id='print'>
             <p>Email: </p>
-            <p>Telef.: </p>
             <p>LinkedIn: </p>
             <p>GitHub: </p>
           </footer>
-          <footer id='no-print'>
+          <footer className='no-print' id='rrss-links'>
             <div id='rrss-links'>
-              {console.log(basics)}
-             
+              
+            <a>{ SOCIAL_ICONS['Mail']} </a>
+              
+              {rrss.map((item, i) => {
+                const Icon = SOCIAL_ICONS[item.network]
+                return (
+                  <a key={i}> {Icon} </a>
+                )
+              })}
             </div>
             <a
-              id='webPage'
+              id='web-page'
               target='_blank'
               title='Visitar la pagina web de nickname'
               href=''
             >
-              <p>s</p>
+              <p>Página Web</p>
             </a>
           </footer>
         </div>
         <figure id='avatar'>
-          <img src="https://i.ibb.co/s5smtmL/profile-pic.jpg" alt="Héctor Avatar" />
+          <img
+            src='https://i.ibb.co/s5smtmL/profile-pic.jpg'
+            alt='Héctor Avatar'
+          />
         </figure>
-      </div>
     </Section>
   );
 }

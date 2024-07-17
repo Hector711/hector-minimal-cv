@@ -2,15 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.jsx';
 // TYPOGRAPHY
+// Supports weights 200-900
+import '@fontsource-variable/nunito-sans';
+// Supports weights 300-900
+import '@fontsource-variable/figtree';
 
 // SECTIONS
 import '@/css/section-hero.css';
 
 // CSS
 import '@/css/0/reset.css';
-import '@/css/init.css';
+import '@/css/elements.css';
 import '@/css/styles.css';
-import '@/css/comp-hero.css';
 import '@/css/comp-navbar.css';
 import '@/css/comp-footer.css';
 

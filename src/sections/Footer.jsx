@@ -2,11 +2,10 @@ import React from 'react';
 
 export default function Footer() {
   return (
-    <footer id='no-print'>
+    <footer className='no-print' id='body-footer'>
       <div id='footer-container'>
-        <p></p>
-        <a href='https://hector711.github.io' target='_blank'></a>
-        <p></p>
+        <p>Made with Minimal CV Maker</p>
+        <a href='https://hector711.github.io' target='_blank'>Repositorio</a>
       </div>
     </footer>
   );

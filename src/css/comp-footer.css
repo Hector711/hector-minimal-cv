@@ -1,7 +1,6 @@
-footer {
+footer#body-footer {
   position: absolute;
   width: 100%;
-  box-shadow: var(--shadow-s);
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -10,8 +9,8 @@ footer {
   margin-inline: auto;
   transition: all 0.3s ease;
   bottom: 0;
-  border: 1px solid red
 }
+
 #footer-container {
   max-width: 700px;
   width: 100%;
@@ -23,26 +22,6 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  border: 1px solid var(--softGrey);
-  padding: 0 10px;
-  height: 40px;
-  border-radius: 6px;
-  transition: all 0.3s ease;
-  /* width: 150px; */
-  font-size: 1rem;
-  color: var(--softGrey);
-}
-
-a:hover {
-  background: var(--light);
-  border: 2px solid var(--softWhite);
 }
 
 /* @media print {

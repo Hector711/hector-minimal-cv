@@ -1,11 +1,96 @@
+section#hero {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  svg.icons {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  
+}
+div.info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+footer#rrss-links {
+  display: flex;
+  gap: 0.5rem;
+  div#rrss-links {
+    display: flex;
+    gap: 0.5rem;
+  }
+  a {
+    border: 1px solid var(--black-2);
+    transition: all 0.3s ease-in-out;
+    padding: 0.25rem;
+    width: 2rem;
+    height: 2rem;
+  }
+  a:hover {
+    border: 1px solid var(--white-0);
+  }
+  svg.icons.fill {
+    fill: var(--black-2);
+  }
+  svg.icons.stroke {
+    stroke: var(--black-2);
+  }
+  svg.icons {
+    width: 100%;
+    height: 100%;
+  }
+  a#web-page {
+    width: 100% !important;
+    text-wrap: nowrap;
+  }
+}
+
+
+
+#print {
+  width: max-content;
+}
+#print p {
+  font-size: 0.8rem;
+}
+
 figure#avatar{
   width: 140px;
   height: 140px;
-  border-radius: 1rem;
+  border-radius: 1.8rem;
   overflow: hidden;
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+}
+
+
+
+
+@media screen and (max-width: 670px) {
+  .container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .container * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  footer a {
+    height: 40px;
+    width: 40px;
+  }
+  a > p {
+    font-size: 1.05rem;
+    font-weight: 500;
+  }
+  h1 {
+    text-align: center;
   }
 }

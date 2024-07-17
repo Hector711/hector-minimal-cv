@@ -1,0 +1,90 @@
+html {
+  letter-spacing: -0.0005rem;
+  position: relative;
+}
+main {
+  padding-inline: 4rem;
+  padding-block: 6.6rem;
+  margin: auto;
+  width: 100%;
+}
+section {
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto 45px;
+  border: 0.5px solid var(--white-1);
+  display: flex;
+  flex-direction: column;
+  *{
+    /* border: 1px solid rgb(248, 198, 198); */
+  }
+}
+h1, h3 {
+  color: var(--black-1);
+}
+h1 {
+  font-family: 'Figtree Variable', 'Nunito Sans Variable', Avenir, sans-serif;
+  font-size: 2.4rem;
+  font-weight: 800;
+}
+h2 {
+  line-height: 1.5;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+p {
+  font-size: 1rem;
+  text-wrap: pretty;
+  word-wrap: break-word;
+}
+p.caption {
+  font-size: 0.9rem;
+}
+p.bold {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+  color: var(--darkGrey);
+}
+ul {
+  list-style: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+span {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 1rem;
+  letter-spacing: -0.01rem;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+}
+
+footer,
+#profiles {
+  width: min-content;
+}
+
+
+
+label {
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 13px;
+}

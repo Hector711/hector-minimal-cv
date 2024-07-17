@@ -2,7 +2,8 @@ import * as React from 'react';
 
 export default function GitHub(props) {
   return (
-    <svg viewBox='0 0 98 98' className='icons' {...props}>
+    <svg viewBox='0 0 98 98'       className='icons fill'
+    {...props}>
       <path
         fillRule='evenodd'
         clipRule='evenodd'

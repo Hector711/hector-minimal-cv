@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default function Section({ children, sectionTitle }) {
+export default function Section({ children, sectionTitle, id, className }) {
   return (
-    <section>
-      <h2>{sectionTitle}</h2>
+    <section id={id} className={className}>
+      {sectionTitle && <h3>{sectionTitle}</h3>}
       {children}
     </section>
   );

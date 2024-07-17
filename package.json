@@ -11,6 +11,8 @@
     "format": "prettier --write ./src"
   },
   "dependencies": {
+    "@fontsource-variable/figtree": "^5.0.21",
+    "@fontsource-variable/nunito-sans": "^5.0.14",
     "@midudev/tailwind-animations": "^0.0.7",
     "i18next": "^23.11.3",
     "i18next-browser-languagedetector": "^7.2.1",
