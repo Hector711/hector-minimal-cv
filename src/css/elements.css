@@ -9,21 +9,23 @@ main {
   width: 100%;
 }
 section {
-  max-width: 700px;
+  max-width: var(--width);
   width: 100%;
   margin: 0 auto 45px;
   border: 0.5px solid var(--white-1);
   display: flex;
   flex-direction: column;
-  *{
-    /* border: 1px solid rgb(248, 198, 198); */
-  }
 }
-h1, h3 {
+h1, h2 {
   color: var(--black-1);
+
 }
 h1 {
-  font-family: 'Figtree Variable', 'Nunito Sans Variable', Avenir, sans-serif;
+  font-family: 
+    'Figtree Variable', 
+    'Nunito Sans Variable',
+    Avenir,
+    sans-serif;
   font-size: 2.4rem;
   font-weight: 800;
 }
@@ -33,7 +35,12 @@ h2 {
   font-size: 1.2rem;
 }
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+/* titulos de los projectos */
+h4{
+  font-size: 1rem;
   font-weight: 700;
 }
 
@@ -66,15 +73,7 @@ span {
   letter-spacing: -0.01rem;
 }
 
-footer {
-  display: flex;
-  flex-direction: column;
-}
 
-footer,
-#profiles {
-  width: min-content;
-}
 
 
 

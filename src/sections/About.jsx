@@ -1,6 +1,13 @@
 import React from 'react';
 import Section from '@/sections/components/Section';
+import cv from '@/../cv-es.json';
+
+const { about } = cv.basics;
 
 export default function About() {
-  return <Section sectionTitle='About'> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui repudiandae cumque ullam provident est eius, explicabo placeat debitis nisi molestiae a asperiores officia culpa, cum, mollitia exercitationem quos earum omnis.</Section>;
+  return (
+    <Section sectionTitle='About'>
+      <p>{about}</p>
+    </Section>
+  );
 }

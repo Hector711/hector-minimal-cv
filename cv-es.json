@@ -8,7 +8,7 @@
     "url": "https://www.linkedin.com/in/hector711/",
     "dni": "06020333Z",
     "birth": "15/04/1997",
-    "summary": "Desarrollador junior con un profundo interés en la programación y una firme determinación de ingresar al mundo tecnológico. Busco activamente mi primera oportunidad laboral como programador, con la ambición de construir una carrera sólida y duradera.",
+    "about": "Soy una persona apasionada con una creatividad desbordante. Me encanta desarrollar mis propios proyectos y diseñar soluciones que no solo satisfacen las necesidades del cliente, sino que las superan. Mi enfoque va más allá del aspecto económico; me impulsa la pasión por crear soluciones únicas y significativas que impacten positivamente y dejen huella. Estoy aquí para ayudarte a transformar tus ideas en realidad y alcanzar tus objetivos de negocio de manera efectiva.",
     "location": {
       "postalCode": "28004",
       "city": "Madrid",
@@ -102,6 +102,18 @@
         "Stripe"
       ],
       "url": "https://mera-parivar-web-page.vercel.app"
+    },
+    {
+      "name": "Playing The Simulation 2.0 MVP",
+      "isActive": true,
+      "year": "2024",
+      "description": "Diseñéuna aplicación para la comunidad PTS, con el objetivo de que las personas de la comundidad alcanzasen sus objetivos profesionales.",
+      "highlights": [
+        "ReactJS",
+        "ExpressJS",
+        "NodeJS"
+      ],
+      "url": "https://www.youtube.com/watch?v=aBoJ8oN9z-w"
     }
   ],
   "languages": [

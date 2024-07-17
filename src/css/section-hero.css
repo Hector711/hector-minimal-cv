@@ -3,27 +3,32 @@ section#hero {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
   svg.icons {
     width: 1.5rem;
     height: 1.5rem;
   }
-  
 }
 div.info {
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
+  gap: 0.3rem;
+  header {
+    display: flex;
+    flex-direction: column;
+  }
 }
 footer#rrss-links {
+  width: max-content;
   display: flex;
   gap: 0.5rem;
+  flex-direction: column;
   div#rrss-links {
     display: flex;
     gap: 0.5rem;
   }
   a {
     border: 1px solid var(--black-2);
+    border-radius: 4px;
     transition: all 0.3s ease-in-out;
     padding: 0.25rem;
     width: 2rem;
@@ -43,6 +48,7 @@ footer#rrss-links {
     height: 100%;
   }
   a#web-page {
+    text-align: center;
     width: 100% !important;
     text-wrap: nowrap;
   }

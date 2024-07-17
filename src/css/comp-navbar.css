@@ -11,6 +11,26 @@ nav {
   transition: all 0.3s ease;
   /* border-bottom: 1px solid red; */
   box-shadow: 0 2px 4px 0 rgb(212, 210, 210);
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid var(--softGrey);
+    padding: 0 10px;
+    height: 35px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    width: 120px;
+    font-size: 0.8rem;
+    color: var(--softGrey);
+  }
+  
+  a:hover {
+    background: var(--light);
+    border: 2px solid var(--softWhite);
+  }
 }
 
 #flags {
@@ -28,25 +48,7 @@ nav {
   gap: 2rem;
 }
 
-a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  border: 1px solid var(--softGrey);
-  padding: 0 10px;
-  height: 35px;
-  border-radius: 6px;
-  transition: all 0.3s ease;
-  width: 120px;
-  font-size: 0.8rem;
-  color: var(--softGrey);
-}
 
-a:hover {
-  background: var(--light);
-  border: 2px solid var(--softWhite);
-}
 
 /* @media print {
   nav {

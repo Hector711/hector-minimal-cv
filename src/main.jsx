@@ -9,11 +9,12 @@ import '@fontsource-variable/figtree';
 
 // SECTIONS
 import '@/css/section-hero.css';
+import '@/css/section-projects.css';
 
 // CSS
 import '@/css/0/reset.css';
 import '@/css/elements.css';
-import '@/css/styles.css';
+import '@/css/init.css';
 import '@/css/comp-navbar.css';
 import '@/css/comp-footer.css';
 
