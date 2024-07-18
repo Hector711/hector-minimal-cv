@@ -6,11 +6,12 @@ import App from './App.jsx';
 import '@fontsource-variable/nunito-sans';
 // Supports weights 300-900
 import '@fontsource-variable/figtree';
-
 // SECTIONS
 import '@/css/section-hero.css';
 import '@/css/section-projects.css';
 import '@/css/section-education.css';
+import '@/css/section-languages.css';
+import '@/css/section-experience.css';
 
 // CSS
 import '@/css/0/reset.css';

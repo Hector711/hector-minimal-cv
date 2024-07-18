@@ -1,0 +1,38 @@
+section#languages {
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  li {
+    flex: 1 0 calc(50% - 1rem);
+    max-width: 50%;
+  }
+  
+  header {
+    border-radius: 8px;
+    border: 1px solid var(--white-2);
+    gap: 16px;
+    display: flex;
+    flex-direction: row;
+    padding: 16px;
+    height: 100%;
+    margin: 0px;
+  }
+  
+  p {
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+    bottom: 0;
+  }
+  
+  @media print {
+    #print {
+      page-break-before: auto;
+    }
+  }
+}

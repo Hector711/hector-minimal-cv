@@ -19,6 +19,7 @@ export default function Education() {
                     <p id='lightWeight'>at</p>
                     <h4>
                       <a
+                      
                         id='institution'
                         href={url}
                         target='_blank'

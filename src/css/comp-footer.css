@@ -12,11 +12,10 @@ footer#body-footer {
 }
 
 #footer-container {
-  max-width: 700px;
-  width: 100%;
   display: flex;
-  margin-inline: auto;
   justify-content: space-between;
+  width: 100%;
+  max-width: var(--width);
 }
 #footer-container * {
   display: flex;

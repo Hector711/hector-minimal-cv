@@ -1,0 +1,75 @@
+
+section#experience {
+  a:hover {
+    /* text-decoration: underline; */
+    color: var(--softGrey);
+    text-shadow: 2px 2px 4px var(--light);
+  }
+  svg.icons {
+    width: 20px;
+    height: 20px; 
+  }
+  
+  article {
+    display: flex;
+  
+    justify-content: space-between;
+  }
+  header {
+    display: flex;
+  }
+  header div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 4px;
+  }
+  
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+  
+  #lightWeight {
+    font-weight: 400;
+    color: var(--softGrey);
+  }
+  #company {
+    color: var(--darkGrey);
+    font-weight: 500;
+  }
+  
+  article p {
+    margin-left: 30px;
+    font-size: 0.9rem;
+    line-height: 1.3rem;
+    margin-top: 5px;
+  }
+  article #hero {
+    width: 80%;
+  }
+  
+  article time {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    color: var(--softGrey);
+    font-size: 0.85rem;
+    width: 17%;
+  }
+  
+  @media screen and (max-width: 670px) {
+    article time {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      text-align: right;
+    }
+  }
+  @media print {
+    #print {
+      page-break-before: auto;
+    }
+  }
+}

@@ -1,13 +1,4 @@
-html {
-  letter-spacing: -0.0005rem;
-  position: relative;
-}
-main {
-  padding-inline: 4rem;
-  padding-block: 6.6rem;
-  margin: auto;
-  width: 100%;
-}
+
 section {
   max-width: var(--width);
   width: 100%;
@@ -18,7 +9,6 @@ section {
 }
 h1, h2 {
   color: var(--black-1);
-
 }
 h1 {
   font-family: 
@@ -30,9 +20,9 @@ h1 {
   font-weight: 800;
 }
 h2 {
+  font-size: 1.6rem;
   line-height: 1.5;
-  font-weight: 700;
-  font-size: 1.2rem;
+  font-weight: 750;
 }
 h3 {
   font-size: 1.2rem;
@@ -48,6 +38,7 @@ p {
   font-size: 1rem;
   text-wrap: pretty;
   word-wrap: break-word;
+  font-weight: 500;
 }
 p.caption {
   font-size: 0.9rem;
@@ -72,10 +63,6 @@ span {
   font-size: 1rem;
   letter-spacing: -0.01rem;
 }
-
-
-
-
 
 label {
   padding: 6px 12px;
