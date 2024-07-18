@@ -10,6 +10,7 @@ import '@fontsource-variable/figtree';
 // SECTIONS
 import '@/css/section-hero.css';
 import '@/css/section-projects.css';
+import '@/css/section-education.css';
 
 // CSS
 import '@/css/0/reset.css';
