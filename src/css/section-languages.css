@@ -1,4 +1,4 @@
-section#languages {
+section.languages {
   ul {
     display: flex;
     flex-direction: row;

@@ -1,5 +1,5 @@
 
-section#experience {
+section.experience {
   a:hover {
     /* text-decoration: underline; */
     color: var(--softGrey);

@@ -1,4 +1,4 @@
-section#hero {
+section.hero {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -6,6 +6,11 @@ section#hero {
   svg.icons {
     width: 1.5rem;
     height: 1.5rem;
+  }
+  div#section-main.hero {
+    display: flex;
+    flex-direction: row ;
+    align-items: center;
   }
 }
 div.info {

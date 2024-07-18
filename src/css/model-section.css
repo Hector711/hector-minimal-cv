@@ -1,0 +1,16 @@
+section#section-model {
+  display: flex;
+  flex-direction: column;
+  max-width: var(--width);
+  width: 100%;
+  margin: 0 auto 35px;
+  gap: 0.5rem;
+}
+
+div#section-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 0.5px solid var(--white-1);
+  width: 100%;
+}

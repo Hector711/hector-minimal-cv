@@ -1,5 +1,5 @@
 import React from 'react';
-import Section from '@/sections/components/Section';
+import ModelSection from '@/sections/components/ModelSection';
 import X from '@/assets/icons/X.jsx';
 import Instagram from '@/assets/icons/Instagram.jsx';
 import YouTube from '@/assets/icons/YouTube.jsx';
@@ -24,7 +24,7 @@ export default function Hero() {
     X: <X />,
   };
   return (
-    <Section id='hero'>
+    <ModelSection className='hero'>
       <div className='info'>
         <header>
           <h1>Héctor Guerra</h1>
@@ -41,10 +41,10 @@ export default function Hero() {
         </footer>
         <footer className='no-print' id='rrss-links'>
           <div id='rrss-links'>
-            <a>{SOCIAL_ICONS['Mail']} </a>
+            <a className='hoverr'>{SOCIAL_ICONS['Mail']} </a>
             {rrss.map((item, i) => {
               const Icon = SOCIAL_ICONS[item.network];
-              return <a key={i}> {Icon} </a>;
+              return <a key={i} className='hoverr'> {Icon} </a>;
             })}
           </div>
           <a
@@ -52,6 +52,7 @@ export default function Hero() {
             target='_blank'
             title='Visitar la pagina web de nickname'
             href=''
+            className='hoverr'
           >
             <p>Página Web</p>
           </a>
@@ -63,6 +64,6 @@ export default function Hero() {
           alt='Héctor Avatar'
         />
       </figure>
-    </Section>
+    </ModelSection>
   );
 }

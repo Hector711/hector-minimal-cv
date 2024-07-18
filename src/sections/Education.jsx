@@ -1,12 +1,12 @@
 import React from 'react';
-import Section from '@/sections/components/Section';
+import ModelSection from '@/sections/components/ModelSection';
 import cv from '@/../cv-es.json';
 import Dot from '@/assets/Dot';
 const { education } = cv;
 
 export default function Education() {
   return (
-    <Section sectionTitle='Education' id='education'>
+    <ModelSection sectionTitle='Education' className='education'>
       <ul>
         {education.map(({ name, institution, endDate, url }, i) => {
           return (
@@ -36,6 +36,6 @@ export default function Education() {
           );
         })}
       </ul>
-    </Section>
+    </ModelSection>
   );
 }

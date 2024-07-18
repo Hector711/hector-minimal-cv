@@ -1,4 +1,4 @@
-section#education {
+section.education {
   ul {
     display: flex;
     flex-direction: column;

@@ -1,5 +1,5 @@
 import React from 'react';
-import Section from '@/sections/components/Section';
+import ModelSection from '@/sections/components/ModelSection';
 import cv from '@/../cv-es.json';
 import Dot from '@/assets/Dot';
 
@@ -7,16 +7,15 @@ const { work } = cv;
 
 export default function Experience() {
   return (
-    <Section sectionTitle='Experience' id='experience'>
+    <ModelSection sectionTitle='Experience' className='experience'>
       <ul>
-        {work.map(({ company, startDate, endDate, position, url, summary }) => {
+        {work.map(({ company, startDate, endDate, position, url, summary }, i) => {
           const startYear = new Date(startDate).getFullYear();
           const endYear =
             endDate != null ? new Date(endDate).getFullYear() : 'Actual';
           const years = `${startYear} - ${endYear}`;
-
           return (
-            <li>
+            <li key={i}>
               <article>
                 <div id='hero'>
                   <header>
@@ -37,6 +36,6 @@ export default function Experience() {
           );
         })}
       </ul>
-    </Section>
+    </ModelSection>
   );
 }

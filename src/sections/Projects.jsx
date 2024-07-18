@@ -1,16 +1,16 @@
 import React from 'react';
-import Section from '@/sections/components/Section';
+import ModelSection from '@/sections/components/ModelSection';
 import cv from '@/../cv-es.json';
 const { projects } = cv;
 
 export default function Projects() {
   return (
-    <Section sectionTitle='Projects' id='projects'>
+    <ModelSection sectionTitle='Projects' className='projects'>
       <ul>
         {projects.map(({ name, url, isActive, highlights, description }, i ) => {
           return (
-            <li className='project-cards' key={i}>
-              <a href={url} target='_blank' title={`Ver el proyecto ${name}`}>
+            <li className='project-cards ' key={i}>
+              <a href={url} target='_blank' className='hoverr' title={`Ver el proyecto ${name}`}>
                 <header>
                   <h4>
                     {name}
@@ -28,6 +28,6 @@ export default function Projects() {
           );
         })}
       </ul>
-    </Section>
+    </ModelSection>
   );
 }

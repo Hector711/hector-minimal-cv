@@ -5,20 +5,19 @@ import Footer from '@/sections/Footer';
 import Hero from '@/sections/Hero';
 import Languages from '@/sections/Languages';
 import Navbar from '@/sections/Navbar';
-import Skills from '@/sections/Skills';
 import Projects from '@/sections/Projects';
 
 function App() {
   return (
     <>
       <Navbar />
-      <main className="animate-fade-in-up">
+      <main className="animate-fade-in-up" id='body-main'>
         <Hero />
         <About />
         <Projects />
+        <Experience />
         <Education />
         <Languages />
-        <Experience />
       </main>
       <Footer />
     </>

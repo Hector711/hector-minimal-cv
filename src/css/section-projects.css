@@ -1,4 +1,4 @@
-section#projects {
+section.projects {
   ul {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -10,19 +10,15 @@ li.project-cards {
 
   a {
     border-radius: 8px;
-    border: 1px solid var(--white-2);
     gap: 16px;
     display: flex;
     flex-direction: column;
     padding: 16px;
     height: 100%;
-    transition:
-      background 0.3s ease,
-      border 0.3s ease;
+    border: 1px solid var(--white-2);
+
   }
-  a:hover {
-    background-color: var(--white-1);
-  }
+  a
   header {
     flex: 1;
     h4 {
@@ -32,7 +28,7 @@ li.project-cards {
       gap: 0.5rem;
     }
     p {
-      font-size: 0.75rem;
+      font-size: 0.95rem;
       line-height: 1.2rem;
       margin-bottom: 4px;
     }

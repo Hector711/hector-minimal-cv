@@ -1,13 +1,13 @@
 import React from 'react';
-import Section from '@/sections/components/Section';
+import ModelSection from '@/sections/components/ModelSection';
 import cv from '@/../cv-es.json';
 
 const { about } = cv.basics;
 
 export default function About() {
   return (
-    <Section sectionTitle='About'>
+    <ModelSection sectionTitle='About' className='about'>
       <p>{about}</p>
-    </Section>
+    </ModelSection>
   );
 }
