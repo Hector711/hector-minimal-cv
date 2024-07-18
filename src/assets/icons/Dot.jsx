@@ -9,7 +9,7 @@ export default function Dot(props) {
       strokeWidth={2}
       strokeLinecap="round"
       strokeLinejoin="round"
-      className="icons"
+      className="icons dots"
       {...props}
     >
       <path d="M0 0h24v24H0z" stroke="none" />

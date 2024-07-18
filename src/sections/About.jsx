@@ -6,7 +6,7 @@ const { about } = cv.basics;
 
 export default function About() {
   return (
-    <ModelSection sectionTitle='About' className='about'>
+    <ModelSection sectionTitle='Sobre Mi' className='about'>
       <p>{about}</p>
     </ModelSection>
   );

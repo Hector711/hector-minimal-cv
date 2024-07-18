@@ -1,12 +1,12 @@
 import React from 'react';
 import ModelSection from '@/sections/components/ModelSection';
 import cv from '@/../cv-es.json';
-import Dot from '@/assets/Dot';
+import Dot from '@/assets/icons/Dot';
 const { education } = cv;
 
 export default function Education() {
   return (
-    <ModelSection sectionTitle='Education' className='education'>
+    <ModelSection sectionTitle='Formación' className='education'>
       <ul>
         {education.map(({ name, institution, endDate, url }, i) => {
           return (
@@ -15,22 +15,20 @@ export default function Education() {
                 <header>
                   <Dot />
                   <span>
-                    <h4>{name}</h4>
-                    <p id='lightWeight'>at</p>
-                    <h4>
-                      <a
-                      
-                        id='institution'
-                        href={url}
-                        target='_blank'
-                        title={`Pagina web de ${url}`}
-                      >
-                        {institution}
-                      </a>
-                    </h4>
+                    <h3>{name}</h3>
+                    <span>en</span>
+
+                    <a
+                      className='institutions'
+                      href={url}
+                      target='_blank'
+                      title={`Pagina web de ${url}`}
+                    >
+                      <h3>{institution}</h3>
+                    </a>
                   </span>
+                  <time>{endDate}</time>
                 </header>
-                <p>{endDate}</p>
               </article>
             </li>
           );

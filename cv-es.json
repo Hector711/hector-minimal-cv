@@ -42,7 +42,7 @@
     {
       "company": "Racks",
       "position": "Full Stack Developer",
-      "url": "https://www.racks.com",
+      "url": "https://www.academy2024.rackslabs.com/",
       "startDate": "1/1/2023",
       "endDate": "1/4/2024",
       "summary": "Desarrollé el sistema de gestión de interacciones de la comunidad, optimizando la manera en la que la comunidad interactuaba con la plataforma. Trabajé en un equipo de 5 personas, utilizando metodologías ágiles y herramientas de colaboración.",
@@ -64,16 +64,16 @@
   ],
   "education": [
     {
-      "name": "Full Stack Web Developer",
-      "institution": "The Bridge School",
-      "endDate": "Abril 2024",
-      "url": "https://www.thebridge.tech"
-    },
-    {
       "name": "Especialista en IA",
       "institution": "Racks Academy",
       "endDate": "Junio 2025",
       "url": "https://www.academy2024.rackslabs.com"
+    },
+    {
+      "name": "Full Stack Developer",
+      "institution": "The Bridge School",
+      "endDate": "Abril 2024",
+      "url": "https://www.thebridge.tech"
     },
     {
       "name": "Bartender",

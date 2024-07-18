@@ -5,7 +5,7 @@ const { projects } = cv;
 
 export default function Projects() {
   return (
-    <ModelSection sectionTitle='Projects' className='projects'>
+    <ModelSection sectionTitle='Proyectos' className='projects'>
       <ul>
         {projects.map(({ name, url, isActive, highlights, description }, i ) => {
           return (

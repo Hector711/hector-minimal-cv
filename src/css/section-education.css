@@ -4,44 +4,19 @@ section.education {
     flex-direction: column;
     gap: 19px;
   }
-  a:hover {
-    /* text-decoration: underline; */
-    color: var(--softGrey);
-    text-shadow: 2px 2px 4px var(--light);
-  }
 }
-
 article.job-cards {
-  display: flex;
-  justify-content: space-between;
   header {
     display: flex;
-    width: 80%;
+    width: 100%;
     span {
       display: flex;
-      gap: 10px;
-      align-items: center;
-      width: max-content;
-      h4, p {
-        text-wrap: nowrap;
-      }
+      gap: 7px;
+    }
+    time {
+      margin-left: auto;
     }
   }
-  svg.icons {
-    width: 20px;
-    height: 20px;
-  }
-  p {
-    font-size: 0.8rem;
-    text-align: right;
-    width: 17%;
-  }
-  #lightWeight {
-    font-weight: 400;
-    color: var(--softGrey);
-  }
-  #institution {
-    color: var(--darkGrey);
-    font-weight: 500;
-  }
+
 }
+

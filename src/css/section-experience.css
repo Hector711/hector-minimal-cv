@@ -1,64 +1,12 @@
-
 section.experience {
-  a:hover {
-    /* text-decoration: underline; */
-    color: var(--softGrey);
-    text-shadow: 2px 2px 4px var(--light);
-  }
-  svg.icons {
-    width: 20px;
-    height: 20px; 
-  }
-  
-  article {
-    display: flex;
-  
-    justify-content: space-between;
-  }
-  header {
-    display: flex;
-  }
-  header div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-right: 4px;
-  }
-  
+ 
   ul {
     display: flex;
     flex-direction: column;
     gap: 22px;
   }
-  
-  #lightWeight {
-    font-weight: 400;
-    color: var(--softGrey);
-  }
-  #company {
-    color: var(--darkGrey);
-    font-weight: 500;
-  }
-  
-  article p {
-    margin-left: 30px;
-    font-size: 0.9rem;
-    line-height: 1.3rem;
-    margin-top: 5px;
-  }
-  article #hero {
-    width: 80%;
-  }
-  
-  article time {
-    display: flex;
-    justify-content: flex-end;
-    flex-wrap: wrap;
-    color: var(--softGrey);
-    font-size: 0.85rem;
-    width: 17%;
-  }
-  
+
+
   @media screen and (max-width: 670px) {
     article time {
       display: flex;
@@ -72,4 +20,50 @@ section.experience {
       page-break-before: auto;
     }
   }
+}
+
+li.experience-cards {
+  article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    header {
+      display: flex;
+      span {
+        display: flex;
+        gap: 7px;
+      }
+      time {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-left: auto;
+        font-size: 0.85rem;
+
+      }
+    }
+  }
+  section{
+
+    p {
+      margin-left: 20px;
+      font-size: 0.9rem;
+      line-height: 1.3rem;
+      margin-top: 2px;
+    }
+  }
+
+}
+
+
+svg.dots {
+  width: 20px;
+}
+a.companies, a.institutions {
+
+  transition: all 0.3s ease-in-out;
+}
+a.companies:hover, a.institutions:hover {
+  text-decoration: underline;
+  color: var(--black-0);
 }

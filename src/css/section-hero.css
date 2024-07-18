@@ -35,7 +35,7 @@ footer#rrss-links {
     border: 1px solid var(--black-2);
     border-radius: 4px;
     transition: all 0.3s ease-in-out;
-    padding: 0.25rem;
+    padding: 0.3rem;
     width: 2.2rem;
     height: 2.2rem;
   }

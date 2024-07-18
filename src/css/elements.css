@@ -38,13 +38,8 @@ p.bold {
   font-weight: 650;
   text-transform: uppercase;
 }
-.uppercase {
-}
 
-a {
-  text-decoration: none;
-  color: var(--darkGrey);
-}
+
 ul {
   list-style: none;
 }

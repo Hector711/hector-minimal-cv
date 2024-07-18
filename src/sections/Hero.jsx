@@ -28,7 +28,7 @@ export default function Hero() {
       <div className='info'>
         <header>
           <h1>Héctor Guerra</h1>
-          <h3>Full Stack Developer</h3>
+          <h3>Programador Full Stack</h3>
         </header>
         <span>
           <Location />

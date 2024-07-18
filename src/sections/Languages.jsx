@@ -5,7 +5,7 @@ import cv from '@/../cv-es.json';
 const { languages } = cv;
 export default function Languages() {
   return (
-    <ModelSection sectionTitle='Languages' className='languages'>
+    <ModelSection sectionTitle='Idiomas' className='languages'>
       <ul>
         {languages.map(({ language, fluency }, i) => {
           return (
