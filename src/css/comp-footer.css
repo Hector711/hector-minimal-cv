@@ -9,6 +9,7 @@ footer#body-footer {
   margin-inline: auto;
   transition: all 0.3s ease;
   bottom: 0;
+  box-shadow: 0 -1px 2px 0px var(--white-2);
 }
 
 #footer-container {
@@ -16,6 +17,32 @@ footer#body-footer {
   justify-content: space-between;
   width: 100%;
   max-width: var(--width);
+  a {
+    display: flex;
+    gap: 5px;
+    border: 1px solid var(--black-2);
+    border-radius: var(--border-s);
+    padding: 0.3rem 0.6rem;
+
+  }
+  div#cv-maker {
+    display: flex;
+    gap: 0.5rem;
+
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  svg.icons.fill {
+    width: 1.2rem;
+    height: 1.2rem;
+    fill: var(--black-2);
+  }
+  svg.icons.stroke {
+    width: 1.2rem;
+    height: 1.2rem;
+    stroke: var(--black-2);
+  }
 }
 #footer-container * {
   display: flex;

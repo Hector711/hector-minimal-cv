@@ -4,8 +4,9 @@ section.hero {
   align-items: center;
   justify-content: space-between;
   svg.icons {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 1.4rem;
+    height: 1.4rem;
+
   }
   div#section-main.hero {
     display: flex;
@@ -33,7 +34,7 @@ footer#rrss-links {
   }
   a {
     border: 1px solid var(--black-2);
-    border-radius: 4px;
+    border-radius: var(--border-s);
     transition: all 0.3s ease-in-out;
     padding: 0.3rem;
     width: 2.2rem;

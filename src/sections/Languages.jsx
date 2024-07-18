@@ -9,10 +9,11 @@ export default function Languages() {
       <ul>
         {languages.map(({ language, fluency }, i) => {
           return (
-            <li key={i}>
+            <li key={i} className='language-cards'>
               <header>
                 <h3>{language}</h3>
-                <p>{fluency}</p>
+                <span>&#8209;</span>
+                <p> {fluency}</p>
               </header>
             </li>
           );

@@ -1,5 +1,4 @@
 nav {
-  box-shadow: var(--shadow-s);
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -9,28 +8,24 @@ nav {
   width: 100%;
   margin-inline: auto;
   transition: all 0.3s ease;
-  /* border-bottom: 1px solid red; */
-  box-shadow: 0 2px 4px 0 rgb(212, 210, 210);
+  box-shadow: 0 1px 2px 0px var(--white-2);
+
 
   a {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    border: 1px solid var(--softGrey);
+
     padding: 0 10px;
     height: 35px;
     border-radius: 6px;
     transition: all 0.3s ease;
     width: 120px;
     font-size: 0.8rem;
-    color: var(--softGrey);
+
   }
   
-  a:hover {
-    background: var(--light);
-    border: 2px solid var(--softWhite);
-  }
 }
 
 #flags {
@@ -50,8 +45,4 @@ nav {
 
 
 
-/* @media print {
-  nav {
-    display: none;
-  }
-} */
+

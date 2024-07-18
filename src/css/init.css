@@ -14,7 +14,7 @@
   --black-1: #3a3a3a;
   --black-0: #000000;
 
-  --border-s: 5px;
+  --border-s: 4px;
   --border-m: 8px;
   --border-l: 20px;
 
@@ -35,12 +35,6 @@
   transition: all 0.3s ease-in-out;
 }
 
-@media print {
-  #no-print {
-    display: none !important;
-  }
-}
-
 #print {
   display: none !important;
   font-size: 0.9rem;
@@ -48,20 +42,23 @@
 }
 
 @media print {
+  #no-print {
+    display: none !important;
+  }
   #print {
     display: block !important;
   }
   html {
     background-color: var(--totalWhite) !important;
   }
-  p,
-  span,
-  h2,
-  time {
-    color: var(--darkGrey) !important;
-  }
   article p {
     width: 550px !important;
+  }
+  nav {
+    display: none !important;
+  }
+  footer#body-footer {
+    display: none !important;
   }
 }
 
@@ -77,3 +74,4 @@
     padding-top: 4px;
   }
 }
+
