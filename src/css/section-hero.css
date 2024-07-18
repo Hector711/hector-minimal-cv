@@ -36,8 +36,8 @@ footer#rrss-links {
     border-radius: 4px;
     transition: all 0.3s ease-in-out;
     padding: 0.25rem;
-    width: 2rem;
-    height: 2rem;
+    width: 2.2rem;
+    height: 2.2rem;
   }
   a:hover {
     border: 1px solid var(--white-0);

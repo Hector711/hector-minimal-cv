@@ -54,7 +54,7 @@ export default function Hero() {
             href=''
             className='hoverr'
           >
-            <p>Página Web</p>
+            <p className='bold'>Página Web</p>
           </a>
         </footer>
       </div>
