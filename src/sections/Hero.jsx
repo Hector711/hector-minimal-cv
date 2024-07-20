@@ -71,13 +71,6 @@ export default function Hero() {
             url={basics.calendly}
             rootElement={document.getElementById('root')}
             text='Reservar Llamada'
-            pageSettings={{
-              backgroundColor: '28282a',
-              hideEventTypeDetails: false,
-              hideLandingPageDetails: true,
-              primaryColor: '',
-              textColor: '3133c5',
-            }}
             onModalClose={() => setCalendlyPopUp(false)}
             open={calendlyPopUp}
           />
