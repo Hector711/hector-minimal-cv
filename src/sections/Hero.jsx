@@ -9,11 +9,14 @@ import LinkedIn from '@/assets/icons/LinkedIn.jsx';
 import Location from '@/assets/icons/Location.jsx';
 import GitHub from '@/assets/icons/GitHub.jsx';
 import cv from '@/../cv-es.json';
+import { PopupModal } from 'react-calendly';
+import { useState } from 'react';
 
 const basics = cv.basics;
 const rrss = basics.rrss;
 
 export default function Hero() {
+  const [calendlyPopUp, setCalendlyPopUp] = useState(false);
   const SOCIAL_ICONS = {
     Instagram: <Instagram />,
     YouTube: <YouTube />,
@@ -44,18 +47,40 @@ export default function Hero() {
             <a className='hoverr'>{SOCIAL_ICONS['Mail']} </a>
             {rrss.map((item, i) => {
               const Icon = SOCIAL_ICONS[item.network];
-              return <a key={i} className='hoverr'> {Icon} </a>;
+              return (
+                <a key={i} className='hoverr'>
+                  {' '}
+                  {Icon}{' '}
+                </a>
+              );
             })}
           </div>
           <a
             id='web-page'
             target='_blank'
-            title='Visitar la pagina web de nickname'
+            title='Visitar la pagina web de '
             href=''
             className='hoverr'
           >
             <p className='bold'>Página Web</p>
           </a>
+          <button id='calendly' onClick={() => setCalendlyPopUp(true)}>
+            <p>Reservar Llamada</p>
+          </button>
+          <PopupModal
+            url={basics.calendly}
+            rootElement={document.getElementById('root')}
+            text='Reservar Llamada'
+            pageSettings={{
+              backgroundColor: '28282a',
+              hideEventTypeDetails: false,
+              hideLandingPageDetails: true,
+              primaryColor: '',
+              textColor: '3133c5',
+            }}
+            onModalClose={() => setCalendlyPopUp(false)}
+            open={calendlyPopUp}
+          />
         </footer>
       </div>
       <figure id='avatar'>

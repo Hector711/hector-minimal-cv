@@ -6,7 +6,6 @@ section.hero {
   svg.icons {
     width: 1.4rem;
     height: 1.4rem;
-
   }
   div#section-main.hero {
     display: flex;
@@ -32,7 +31,7 @@ footer#rrss-links {
     display: flex;
     gap: 0.5rem;
   }
-  a {
+  a, #calendly {
     border: 1px solid var(--black-2);
     border-radius: var(--border-s);
     transition: all 0.3s ease-in-out;
@@ -53,7 +52,7 @@ footer#rrss-links {
     width: 100%;
     height: 100%;
   }
-  a#web-page {
+  a#web-page, button#calendly{
     text-align: center;
     width: 100% !important;
     text-wrap: nowrap;
