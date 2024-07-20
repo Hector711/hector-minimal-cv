@@ -64,8 +64,8 @@ export default function Hero() {
           >
             <p className='bold'>Página Web</p>
           </a>
-          <button id='calendly' onClick={() => setCalendlyPopUp(true)}>
-            <p>Reservar Llamada</p>
+          <button id='calendly' onClick={() => setCalendlyPopUp(true)} >
+            <p className='bold'>Reservar Llamada</p>
           </button>
           <PopupModal
             url={basics.calendly}
