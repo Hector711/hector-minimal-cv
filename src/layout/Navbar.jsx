@@ -20,15 +20,12 @@ export default function Navbar() {
   return (
     <nav>
       <div id='nav-container'>
-        {/* <SpainFlag />
-        <USFlag /> */}
-
         {LANGUAGES.map((language, i) => {
           if (language.code !== actualLng) {
             return (
               <Link
                 key={i}
-                href={`/${language.code}`}
+                to={`/${language.code}`}
                 className='hoverr'
               >
                 <Language />
