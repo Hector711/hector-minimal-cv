@@ -1,10 +1,6 @@
 import React from 'react';
 import { getLangFromUrl } from '@/i18n/i18n';
-import SpainFlag from '@/assets/icons/SpainFlag'
 import Language from '@/assets/icons/Language'
-import Moon from '@/assets/icons/Moon'
-import Sun from '@/assets/icons/Sun'
-import USFlag from '@/assets/icons/USFlag'
 
 
 export default function Navbar() {
