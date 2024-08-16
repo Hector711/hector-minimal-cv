@@ -1,6 +1,6 @@
 {
   "basics": {
-    "nickname": "ESPAÑOL",
+    "nickname": "Héctor",
     "name": "Héctor Guerra",
     "label": "Frontend Developer & IA Specialist",
     "image": "https://i.ibb.co/s5smtmL/profile-pic.jpg",
@@ -54,7 +54,7 @@
   ],
   "education": [
     {
-      "name": "Especialización en IA",
+      "name": "Especialista en IA",
       "institution": "Racks Academy",
       "endDate": "Junio 2025",
       "url": "https://www.academy2024.rackslabs.com"

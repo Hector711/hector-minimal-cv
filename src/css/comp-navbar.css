@@ -9,14 +9,16 @@ nav {
   margin-inline: auto;
   transition: all 0.3s ease;
   box-shadow: 0 1px 2px 0px var(--white-2);
-
+  z-index: 1000; /* Agregado para asegurar que el nav esté por encima */
+  #nav-container {
+    display: flex;
+  }
 
   a {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
-
     padding: 0 10px;
     height: 35px;
     border-radius: 6px;
@@ -25,7 +27,6 @@ nav {
     font-size: 0.8rem;
 
   }
-  
 }
 
 #flags {

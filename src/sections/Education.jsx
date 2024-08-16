@@ -1,12 +1,15 @@
 import React from 'react';
-import ModelSection from '@/sections/components/ModelSection';
+import ModelSection from '@/components/ModelSection';
 import cv from '@/../cv-es.json';
 import Dot from '@/assets/icons/Dot';
 const { education } = cv;
+import { useTranslation } from 'react-i18next';
 
 export default function Education() {
+  const { t } = useTranslation();
   return (
     <ModelSection sectionTitle='Formación' className='education'>
+      {/* <h1>{t("cv:basics.nickname")}</h1> */}
       <ul>
         {education.map(({ name, institution, endDate, url }, i) => {
           return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import ModelSection from '@/sections/components/ModelSection';
+import ModelSection from '@/components/ModelSection';
 import X from '@/assets/icons/X.jsx';
 import Instagram from '@/assets/icons/Instagram.jsx';
 import YouTube from '@/assets/icons/YouTube.jsx';
