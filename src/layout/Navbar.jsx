@@ -1,6 +1,7 @@
 import React from 'react';
 import { getLangFromUrl } from '@/i18n/i18n';
 import Language from '@/assets/icons/Language'
+import { Link } from 'react-router-dom';
 
 
 export default function Navbar() {
@@ -28,10 +29,10 @@ export default function Navbar() {
         {LANGUAGES.map((language, i) => {
           if (language.code !== actualLng) {
             return (
-              <a key={i} href={`/${language.code}`} className='hoverr'>
+              <Link key={i} to={`/${language.code}`} className='hoverr'>
                 <Language />
                 {language.label}
-              </a>
+              </ Link>
             );
           } else {
             return "";
