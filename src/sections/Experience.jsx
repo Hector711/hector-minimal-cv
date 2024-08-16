@@ -1,5 +1,5 @@
 import React from 'react';
-import ModelSection from '@/sections/components/ModelSection';
+import ModelSection from '@/components/ModelSection';
 import cv from '@/../cv-es.json';
 import Dot from '@/assets/icons/Dot';
 

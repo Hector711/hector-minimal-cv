@@ -1,23 +1,26 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
+import Backend from 'i18next-http-backend';
 
-i18n.use(initReactI18next).init({
-  lng: "en",
-  fallbackLng: "en",
-  interpolation: {
-    escapeValue: false,
-  },
-  ns:['translations', 'cv'],
-  resources:{
-    en: {
-        translation: {
-            title: 'Multi-language app',
-        }
+export const getLangFromUrl = () => {
+  const url = window.location.pathname;
+  const lang = url.split('/')[1];
+  return lang === 'es' || lang === 'en' ? lang : 'en';
+};
+console.log(getLangFromUrl())
+
+i18n
+  .use(initReactI18next)
+  .use(Backend)
+  .init({
+    lng:  getLangFromUrl(),
+    fallbackLng: "es",
+    interpolation: {
+      escapeValue: false,
     },
-    es: {
-        translation: {
-            title: 'Aplicación en varios idiomas',
-        }
+    ns:['translations', 'cv'],
+    backend: {
+      loadPath: '../../public/locales/{{lng}}/{{ns}}.json',
     },
-},
-});
+    debug: true,
+  });

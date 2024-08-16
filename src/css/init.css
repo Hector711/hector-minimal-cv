@@ -29,10 +29,11 @@
 }
 
 .hoverr:hover {
-  background-color: var(--white-0);
-  border: 1px solid var(--white-0);
+  background-color: var(--white-0) !important;
+  border: 1px solid var(--white-0) !important;
 }
 .hoverr {
+  border: 1px solid var(--white-2);
   transition: all 0.3s ease-in-out;
 }
 

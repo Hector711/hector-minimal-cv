@@ -2,14 +2,14 @@
   "basics": {
     "nickname": "Héctor",
     "name": "Héctor Guerra",
-    "label": "Desarrolador Frontend & Especialista en IA",
+    "label": "Frontend Developer & AI Specialist",
     "image": "https://i.ibb.co/s5smtmL/profile-pic.jpg",
     "email": "hectorluengo.xx@gmail.com",
     "url": "",
-    "calendly" : "https://calendly.com/hector-guerra/llamada-1-a-1",
+    "calendly": "https://calendly.com/hector-guerra/llamada-1-a-1",
     "dni": "06020333Z",
-    "birth": "15/04/1997",
-    "about": "Soy una persona apasionada con una creatividad desbordante. Me encanta desarrollar mis propios proyectos y diseñar soluciones que no solo satisfacen las necesidades del cliente, sino que las superan. Mi enfoque va más allá del aspecto económico; me impulsa la pasión por crear soluciones únicas y significativas que impacten positivamente y dejen huella. Estoy aquí para ayudarte a transformar tus ideas en realidad y alcanzar tus objetivos de negocio de manera efectiva.",
+    "birth": "04/15/1997",
+    "about": "I am a passionate person with overflowing creativity. I love developing my own projects and designing solutions that not only meet clients' needs but exceed them. My focus goes beyond the economic aspect; I am driven by a passion to create unique and meaningful solutions that have a positive impact and leave a lasting impression. I'm here to help you turn your ideas into reality and achieve your business goals effectively.",
     "location": {
       "postalCode": "28004",
       "city": "Madrid",
@@ -42,11 +42,11 @@
   "work": [
     {
       "company": "Frutería Conde Duque",
-      "position": "Autónomo",
+      "position": "Freelancer",
       "url": "https://www.google.com/maps?hl=es&gl=es&um=1&ie=UTF-8&fb=1&sa=X&ftid=0xd4229b14463e331:0xf703f76022ca0f93",
-      "startDate": "1/1/2023",
-      "endDate": "1/4/2024",
-      "summary": "En este negocio me encargé junto con mi padre de todas las operaciones del negocio, administración, atención al cliente, diseño de productos, organizacion, optimización de procesos y lo que hicise falta.",
+      "startDate": "01/01/2023",
+      "endDate": "04/01/2024",
+      "summary": "In this business, I worked alongside my father, handling all operations, including administration, customer service, product design, organization, process optimization, and whatever was needed.",
       "highlights": [
         ""
       ]
@@ -54,27 +54,27 @@
   ],
   "education": [
     {
-      "name": "Especialista en IA",
+      "name": "AI Specialist",
       "institution": "Racks Academy",
-      "endDate": "Junio 2025",
+      "endDate": "June 2025",
       "url": "https://www.academy2024.rackslabs.com"
     },
     {
       "name": "Full Stack Developer",
       "institution": "The Bridge School",
-      "endDate": "Abril 2024",
+      "endDate": "April 2024",
       "url": "https://www.thebridge.tech"
     },
     {
       "name": "Bartender",
       "institution": "ESCOM",
-      "endDate": "Junio 2022",
+      "endDate": "June 2022",
       "url": "https://www.escuelacocteleria.es"
     },
     {
-      "name": "Técnico Sonido",
+      "name": "Sound Technician",
       "institution": "Escuela Música Creativa",
-      "endDate": "Junio 2021",
+      "endDate": "June 2021",
       "url": "https://musicacreativa.com"
     }
   ],
@@ -83,7 +83,7 @@
       "name": "Playing The Simulation 2.0 MVP",
       "isActive": true,
       "year": "2024",
-      "description": "Diseñé una aplicación para la comunidad PTS, con el objetivo de aumentar el ratio de ejecución de los miembros y que asi consigan sus objetivos profesionales.",
+      "description": "I designed an application for the PTS community with the goal of increasing members' execution rate, helping them achieve their professional goals.",
       "highlights": [
         "ReactJS",
         "ExpressJS",
@@ -92,10 +92,10 @@
       "url": "https://www.youtube.com/watch?v=aBoJ8oN9z-w"
     },
     {
-      "name": "Mera Parivar ONG MVP",
+      "name": "Mera Parivar NGO MVP",
       "isActive": true,
       "year": "2024",
-      "description": "Dirigí el equipo Full Stack, colaborando con UX/UI, Marketing, Data Science y Ciberseguridad. Nuestro objetivo: desarrollar una solución tecnológica que permitiera optimizar sus procesos, ampliar su alcance y aumentar la recaudación de la ONG.",
+      "description": "I led the Full Stack team, collaborating with UX/UI, Marketing, Data Science, and Cybersecurity. Our goal: to develop a technological solution that would optimize their processes, expand their reach, and increase the NGO's fundraising.",
       "highlights": [
         "ReactJS",
         "Tailwind",
@@ -108,11 +108,11 @@
   ],
   "languages": [
     {
-      "language": "Español",
-      "fluency": "Nativo"
+      "language": "Spanish",
+      "fluency": "Native"
     },
     {
-      "language": "Inglés",
+      "language": "English",
       "fluency": "C1"
     }
   ]

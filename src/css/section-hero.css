@@ -32,15 +32,11 @@ footer#social-links {
     gap: 0.5rem;
   }
   .social-links, #calendly {
-    border: 1px solid var(--black-2);
     border-radius: var(--border-s);
     transition: all 0.3s ease-in-out;
     padding: 0.3rem;
     width: 2.2rem;
     height: 2.2rem;
-  }
-  .social-links:hover {
-    border: 1px solid var(--white-0);
   }
   svg.icons.fill {
     fill: var(--black-2);
@@ -58,8 +54,6 @@ footer#social-links {
     text-wrap: nowrap;
   }
 }
-
-
 
 #print {
   width: max-content;
@@ -79,7 +73,6 @@ figure#avatar{
     object-fit: cover;
   }
 }
-
 
 @media screen and (max-width: 670px) {
   .container {
