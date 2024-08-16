@@ -2,7 +2,7 @@ import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import Backend from 'i18next-http-backend';
 
-const locales = '../../locales' || import.meta.env.VITE_LOCALES
+const locales = 'public/locales' || import.meta.env.VITE_LOCALES
 
 export const getLangFromUrl = () => {
   const url = window.location.pathname;

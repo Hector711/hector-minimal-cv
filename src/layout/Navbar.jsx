@@ -28,7 +28,7 @@ export default function Navbar() {
             return (
               <a
                 key={i}
-                to={`/${language.code}`}
+                href={`/${language.code}`}
                 className='hoverr'
               >
                 <Language />
