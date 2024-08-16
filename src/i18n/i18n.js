@@ -1,10 +1,8 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import Backend from 'i18next-http-backend';
-import dotenv from 'dotenv';
-dotenv.config(); // Carga las variables de entorno
 
-const locales = import.meta.env.VITE_LOCALES;
+const locales = '../../public/locales' || import.meta.env.VITE_LOCALES
 
 export const getLangFromUrl = () => {
   const url = window.location.pathname;
