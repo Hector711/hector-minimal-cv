@@ -22,16 +22,16 @@ div.info {
     flex-direction: column;
   }
 }
-footer#rrss-links {
+footer#social-links {
   width: max-content;
   display: flex;
   gap: 0.5rem;
   flex-direction: column;
-  div#rrss-links {
+  div#social-links {
     display: flex;
     gap: 0.5rem;
   }
-  a, #calendly {
+  .social-links, #calendly {
     border: 1px solid var(--black-2);
     border-radius: var(--border-s);
     transition: all 0.3s ease-in-out;
@@ -39,7 +39,7 @@ footer#rrss-links {
     width: 2.2rem;
     height: 2.2rem;
   }
-  a:hover {
+  .social-links:hover {
     border: 1px solid var(--white-0);
   }
   svg.icons.fill {
@@ -102,4 +102,14 @@ figure#avatar{
   h1 {
     text-align: center;
   }
+}
+
+.toasts-container {
+  margin-block: var(--nav-height);
+  height: 85vh;
+  /* border: 1px solid red; */
+}
+.toasts {
+  background-color: var(--white-0);
+  width: max-content;
 }

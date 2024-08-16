@@ -11,6 +11,10 @@ import GitHub from '@/assets/icons/GitHub.jsx';
 import cv from '@/../cv-es.json';
 import { PopupModal } from 'react-calendly';
 import { useState } from 'react';
+import toast, { Toaster, ToastBar } from 'react-hot-toast';
+
+const notify = () =>
+  toast('Email copiado al portapapeles: hectorluengo.xx@gmail.com');
 
 const basics = cv.basics;
 const rrss = basics.rrss;
@@ -31,7 +35,7 @@ export default function Hero() {
       <div className='info'>
         <header>
           <h1>Héctor Guerra</h1>
-          <h3>Programador Full Stack</h3>
+          <h3>{basics.label}</h3>
         </header>
         <span>
           <Location />
@@ -42,38 +46,61 @@ export default function Hero() {
           <p>LinkedIn: </p>
           <p>GitHub: </p>
         </footer>
-        <footer className='no-print' id='rrss-links'>
-          <div id='rrss-links'>
-            <a className='hoverr'>{SOCIAL_ICONS['Mail']} </a>
+        <footer className='no-print' id='social-links'>
+          <div id='social-links'>
+            {basics.email &&
+            (
+              <>
+                <button onClick={notify} className='hoverr social-links'>
+                  {SOCIAL_ICONS['Mail']}
+                </button>
+                <Toaster
+                  position='bottom-right'
+                  containerClassName='toasts-container'
+                  toastOptions={{
+                    className: 'toasts',
+                  }}
+                />
+              </>
+            )}
             {rrss.map((item, i) => {
               const Icon = SOCIAL_ICONS[item.network];
               return (
-                <a key={i} className='hoverr'>
-                  {' '}
-                  {Icon}{' '}
+                <a key={i} className='hoverr social-links'>
+                  {Icon}
                 </a>
               );
             })}
           </div>
-          <a
-            id='web-page'
-            target='_blank'
-            title='Visitar la pagina web de '
-            href=''
-            className='hoverr'
-          >
-            <p className='bold'>Página Web</p>
-          </a>
-          <button id='calendly' onClick={() => setCalendlyPopUp(true)} >
-            <p className='bold'>Reservar Llamada</p>
-          </button>
-          <PopupModal
-            url={basics.calendly}
-            rootElement={document.getElementById('root')}
-            text='Reservar Llamada'
-            onModalClose={() => setCalendlyPopUp(false)}
-            open={calendlyPopUp}
-          />
+          {basics.url && (
+            <a
+              id='web-page'
+              target='_blank'
+              title='Visitar la pagina web de '
+              href={basics.url}
+              className='hoverr social-links'
+            >
+              <p className='bold'>Página Web</p>
+            </a>
+          )}
+          {basics.calendly && (
+            <>
+              <button
+                id='calendly'
+                className='hoverr social-links'
+                onClick={() => setCalendlyPopUp(true)}
+              >
+                <p className='bold'>Reservar Llamada</p>
+              </button>
+              <PopupModal
+                url={basics.calendly}
+                rootElement={document.getElementById('root')}
+                text='Reservar Llamada'
+                onModalClose={() => setCalendlyPopUp(false)}
+                open={calendlyPopUp}
+              />
+            </>
+          )}
         </footer>
       </div>
       <figure id='avatar'>

@@ -2,10 +2,10 @@
   "basics": {
     "nickname": "Héctor",
     "name": "Héctor Guerra",
-    "label": "Programador Full Stack",
+    "label": "Frontend Developer & IA Specialist",
     "image": "https://i.ibb.co/s5smtmL/profile-pic.jpg",
     "email": "hectorluengo.xx@gmail.com",
-    "url": "https://www.linkedin.com/in/hector711/",
+    "url": "",
     "calendly" : "https://calendly.com/hector-guerra/llamada-1-a-1",
     "dni": "06020333Z",
     "birth": "15/04/1997",
@@ -40,17 +40,6 @@
     ]
   },
   "work": [
-    {
-      "company": "Racks",
-      "position": "Full Stack Developer",
-      "url": "https://www.academy2024.rackslabs.com/",
-      "startDate": "1/1/2023",
-      "endDate": "1/4/2024",
-      "summary": "Desarrollé el sistema de gestión de interacciones de la comunidad, optimizando la manera en la que la comunidad interactuaba con la plataforma. Trabajé en un equipo de 5 personas, utilizando metodologías ágiles y herramientas de colaboración.",
-      "highlights": [
-        ""
-      ]
-    },
     {
       "company": "Frutería Conde Duque",
       "position": "Autónomo",

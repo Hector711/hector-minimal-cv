@@ -10,16 +10,16 @@ import Projects from '@/sections/Projects';
 function App() {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <main className="animate-fade-in-up" id='body-main'>
         <Hero />
         <About />
         <Projects />
-        <Experience />
         <Education />
         <Languages />
+        <Experience />
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
