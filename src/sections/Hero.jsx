@@ -11,7 +11,8 @@ import GitHub from '@/assets/icons/GitHub.jsx';
 import cv from '@/../cv-es.json';
 import { PopupModal } from 'react-calendly';
 import { useState } from 'react';
-import toast, { Toaster, ToastBar } from 'react-hot-toast';
+import toast, { Toaster } from 'react-hot-toast';
+import { useTranslation } from 'react-i18next';
 
 const notify = () =>
   toast('Email copiado al portapapeles: hectorluengo.xx@gmail.com');
@@ -20,6 +21,7 @@ const basics = cv.basics;
 const rrss = basics.rrss;
 
 export default function Hero() {
+  const { t } = useTranslation();
   const [calendlyPopUp, setCalendlyPopUp] = useState(false);
   const SOCIAL_ICONS = {
     Instagram: <Instagram />,
@@ -35,7 +37,7 @@ export default function Hero() {
       <div className='info'>
         <header>
           <h1>Héctor Guerra</h1>
-          <h3>{basics.label}</h3>
+          <h3>{t('cv:basics.label')}</h3>
         </header>
         <span>
           <Location />

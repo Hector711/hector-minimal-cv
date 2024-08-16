@@ -12,6 +12,8 @@ nav {
   z-index: 1000; /* Agregado para asegurar que el nav esté por encima */
   #nav-container {
     display: flex;
+    justify-content: flex-end;
+    width: var(--width);
   }
 
   a {
@@ -23,11 +25,17 @@ nav {
     height: 35px;
     border-radius: 6px;
     transition: all 0.3s ease;
-    width: 120px;
-    font-size: 0.8rem;
-
+    width: 140px;
+    font-size: 0.9rem;
+    border: 1px solid;
+    font-weight: 600;
+    .icons {
+      width: 18px;
+      height: 18px;
+    }
   }
 }
+
 
 #flags {
   display: flex;

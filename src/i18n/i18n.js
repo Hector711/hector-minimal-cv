@@ -20,7 +20,7 @@ i18n
     },
     ns:['translations', 'cv'],
     backend: {
-      loadPath: '../../public/local/{{lng}}/{{ns}}.json',
+      loadPath: '../../public/locales/{{lng}}/{{ns}}.json',
     },
     debug: true,
   });
