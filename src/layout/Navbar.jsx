@@ -32,7 +32,7 @@ export default function Navbar() {
         {LANGUAGES.map((language, i) => {
           if (language.code !== actualLng) {
             return (
-              <a key={i} href={language.code} className='hoverr'>
+              <a key={i} href={`/${language.code}`} className='hoverr'>
                 <Language />
                 {language.label}
               </a>
