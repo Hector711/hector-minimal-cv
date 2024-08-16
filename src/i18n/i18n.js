@@ -2,6 +2,8 @@ import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import Backend from 'i18next-http-backend';
 
+const locales = '../../locales' || import.meta.env.VITE_LOCALES
+
 export const getLangFromUrl = () => {
   const url = window.location.pathname;
   const lang = url.split('/')[1];
@@ -20,7 +22,7 @@ i18n
     },
     ns:['translations', 'cv'],
     backend: {
-      loadPath: '../../public/locales/{{lng}}/{{ns}}.json',
+      loadPath: `${locales}/{{lng}}/{{ns}}.json`,
     },
     debug: true,
   });
