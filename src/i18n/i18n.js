@@ -1,6 +1,10 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import Backend from 'i18next-http-backend';
+import dotenv from 'dotenv';
+dotenv.config(); // Carga las variables de entorno
+
+const locales = import.meta.env.VITE_LOCALES;
 
 export const getLangFromUrl = () => {
   const url = window.location.pathname;
@@ -20,7 +24,7 @@ i18n
     },
     ns:['translations', 'cv'],
     backend: {
-      loadPath: '../../public/locales/{{lng}}/{{ns}}.json',
+      loadPath: `${locales}/{{lng}}/{{ns}}.json`,
     },
     debug: true,
   });
