@@ -26,14 +26,14 @@ export default function Navbar() {
         {LANGUAGES.map((language, i) => {
           if (language.code !== actualLng) {
             return (
-              <Link
+              <a
                 key={i}
                 to={`/${language.code}`}
                 className='hoverr'
               >
                 <Language />
                 {language.label}
-              </Link>
+              </a>
             );
           } else {
             return '';
