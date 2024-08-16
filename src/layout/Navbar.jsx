@@ -30,7 +30,6 @@ export default function Navbar() {
                 key={i}
                 to={`/${language.code}`}
                 className='hoverr'
-                onClick={() => window.location.reload()}
               >
                 <Language />
                 {language.label}
