@@ -1,8 +1,7 @@
 import React from 'react';
 import { getLangFromUrl } from '@/i18n/i18n';
-import Language from '@/assets/icons/Language'
+import Language from '@/assets/icons/Language';
 import { Link } from 'react-router-dom';
-
 
 export default function Navbar() {
   const actualLng = getLangFromUrl();
@@ -11,12 +10,10 @@ export default function Navbar() {
     {
       code: 'es',
       label: 'Español',
-      icon: ''
     },
     {
       code: 'en',
       label: 'English',
-      icon: ''
     },
   ];
 
@@ -29,13 +26,18 @@ export default function Navbar() {
         {LANGUAGES.map((language, i) => {
           if (language.code !== actualLng) {
             return (
-              <Link key={i} to={`/${language.code}`} className='hoverr'>
+              <Link
+                key={i}
+                to={`/${language.code}`}
+                className='hoverr'
+                onClick={() => window.location.reload()}
+              >
                 <Language />
                 {language.label}
-              </ Link>
+              </Link>
             );
           } else {
-            return "";
+            return '';
           }
         })}
       </div>
