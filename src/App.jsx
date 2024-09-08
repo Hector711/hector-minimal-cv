@@ -5,7 +5,6 @@ import HomePage from '@/HomePage';
 import '@/i18n/i18n';
 
 export default function App() {
-
   return (
     <Routes>
       <Route element={<Layout />}>
