@@ -1,24 +1,15 @@
-import { Routes, Route, useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
 
 import Layout from '@/layout/Layout';
 import HomePage from '@/HomePage';
 import '@/i18n/i18n';
 
 export default function App() {
-  const navigate = useNavigate();
 
-  useEffect(() => {
-    const lang = window.location.pathname.split('/')[1];
-    if (lang !== 'es' && lang !== 'en') {
-      navigate('/es');
-    }
-  }, [navigate]);
-  
   return (
     <Routes>
       <Route element={<Layout />}>
-        <Route path='/:lang' element={<HomePage />} />
+        <Route path='/' element={<HomePage />} />
       </Route>
     </Routes>
   );

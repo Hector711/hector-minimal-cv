@@ -1,21 +1,17 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import Backend from 'i18next-http-backend';
+import LanguageDetector from 'i18next-browser-languagedetector';
 
 const locales = 'public/locales' || import.meta.env.VITE_LOCALES
 
-export const getLangFromUrl = () => {
-  const url = window.location.pathname;
-  const lang = url.split('/')[1];
-  return lang === 'es' || lang === 'en' ? lang : 'en';
-};
-console.log(getLangFromUrl())
-
 i18n
+  .use(LanguageDetector)
   .use(initReactI18next)
   .use(Backend)
   .init({
-    lng:  getLangFromUrl(),
+    debug: true,
+    lng:  'es',
     fallbackLng: "es",
     interpolation: {
       escapeValue: false,
@@ -24,5 +20,4 @@ i18n
     backend: {
       loadPath: `${locales}/{{lng}}/{{ns}}.json`,
     },
-    debug: true,
   });

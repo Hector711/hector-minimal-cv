@@ -1,10 +1,13 @@
 import React from 'react';
-import { getLangFromUrl } from '@/i18n/i18n';
 import Language from '@/assets/icons/Language';
-import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 export default function Navbar() {
-  const actualLng = getLangFromUrl();
+  const { i18n } = useTranslation();
+  const actualLng = i18n.language;
+  const changeLanguage = code => {
+    i18n.changeLanguage(code);
+  };
 
   const LANGUAGES = [
     {
@@ -20,17 +23,17 @@ export default function Navbar() {
   return (
     <nav>
       <div id='nav-container'>
-        {LANGUAGES.map((language, i) => {
-          if (language.code !== actualLng) {
+        {LANGUAGES.map(({ code, label }) => {
+          if (code !== actualLng) {
             return (
-              <Link
-                key={i}
-                to={`/${language.code}`}
+              <button
+                key={code}
                 className='hoverr'
+                onClick={() => changeLanguage(code)}
               >
                 <Language />
-                {language.label}
-              </ Link>
+                {label}
+              </button>
             );
           } else {
             return '';

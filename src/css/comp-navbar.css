@@ -16,7 +16,7 @@ nav {
     width: var(--width);
   }
 
-  a {
+  button {
     display: flex;
     justify-content: center;
     align-items: center;
