@@ -12,11 +12,8 @@ import { PopupModal } from 'react-calendly';
 import { useState } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 import { useTranslation } from 'react-i18next';
-import i18n from '@/i18n/i18n';
-
 
 export default function Hero() {
-  
   const notify = () =>
     toast(`Email copiado al portapapeles: ${t('basics:email')}`);
   const [calendlyPopUp, setCalendlyPopUp] = useState(false);
@@ -25,9 +22,11 @@ export default function Hero() {
 
   const language = i18n.language;
 
-  console.log(useTranslation())
-  console.log('profiles:',i18n.getDataByLanguage(language, 'profiles'))
-  // const profiles = i18n.getResourceBundle(language, 'profiles')
+  const profilesObject = i18n.getResourceBundle(language, 'profiles');
+  const profiles = Object.values(profilesObject);
+
+  const basics = i18n.getResourceBundle(language, 'basics');
+
 
   const SOCIAL_ICONS = {
     Instagram: <Instagram />,
@@ -47,7 +46,9 @@ export default function Hero() {
         </header>
         <span>
           <Location />
-          <h5>{t('basics:city')}, {t('basics:country')}.</h5>
+          <h5>
+            {t('basics:city')}, {t('basics:country')}.
+          </h5>
         </span>
         <footer id='print'>
           <p>Email: </p>
@@ -56,8 +57,7 @@ export default function Hero() {
         </footer>
         <footer className='no-print' id='social-links'>
           <div id='social-links'>
-            {t('basics:email') &&
-            (
+            {t('basics:email') && (
               <>
                 <button onClick={notify} className='hoverr social-links'>
                   {SOCIAL_ICONS['Mail']}
@@ -79,11 +79,22 @@ export default function Hero() {
                 </a>
               );
             })} */}
-
-
-            
+            {profiles.map((item, i) => {
+              const Icon = SOCIAL_ICONS[item.network];
+              return (
+                <a
+                  key={i}
+                  href={item.url} // Añade la URL del perfil
+                  className='hoverr social-links'
+                  target='_blank' // Abre en una nueva pestaña
+                  rel='noopener noreferrer' // Seguridad adicional
+                >
+                  {Icon}
+                </a>
+              );
+            })}
           </div>
-          {/* {basics.url && (
+          {basics.url && (
             <a
               id='web-page'
               target='_blank'
@@ -91,17 +102,17 @@ export default function Hero() {
               href={basics.url}
               className='hoverr social-links'
             >
-              <p className='bold'>Página Web</p>
+              <p className='bold'>{t('translations:web_page')}</p>
             </a>
-          )} */}
-          {/* {basics.calendly && (
+          )}
+          {basics.calendly && (
             <>
               <button
                 id='calendly'
                 className='hoverr social-links'
                 onClick={() => setCalendlyPopUp(true)}
               >
-                <p className='bold'>Reservar Llamada</p>
+                <p className='bold'>{t('translations:reservar_llamada')}</p>
               </button>
               <PopupModal
                 url={basics.calendly}
@@ -111,12 +122,12 @@ export default function Hero() {
                 open={calendlyPopUp}
               />
             </>
-          )} */}
+          )}
         </footer>
       </div>
       <figure id='avatar'>
         <img
-          src='https://i.ibb.co/s5smtmL/profile-pic.jpg'
+          src={basics.image}
           alt='Héctor Avatar'
         />
       </figure>

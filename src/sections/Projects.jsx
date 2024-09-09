@@ -1,19 +1,27 @@
 import React from 'react';
 import ModelSection from '@/components/ModelSection';
-
+import { useTranslation } from 'react-i18next';
 
 export default function Projects() {
+  const { t, i18n } = useTranslation();
+
+  const language = i18n.language;
+
+  const projectsObject = i18n.getResourceBundle(language, 'projects');
+  const projects = Object.values(projectsObject);
+
+
   return (
-    <ModelSection sectionTitle='Proyectos' className='projects'>
+    <ModelSection sectionTitle={t('translations:projects')} className='projects'>
       <ul>
-        {/* {projects.map(({ name, url, isActive, highlights, description }, i ) => {
+        {projects.map(({ name, url, active, highlights, description }, i ) => {
           return (
             <li className='project-cards ' key={i}>
               <a href={url} target='_blank' className='hoverr' title={`Ver el proyecto ${name}`}>
                 <header>
                   <h4>
                     {name}
-                    {isActive && <span>&bull;</span>}
+                    {active && <span>&bull;</span>}
                   </h4>
                   <p>{description}</p>
                 </header>
@@ -25,7 +33,7 @@ export default function Projects() {
               </a>
             </li>
           );
-        })} */}
+        })}
       </ul>
     </ModelSection>
   );

@@ -16,6 +16,7 @@ li.project-cards {
     padding: 16px;
     height: 100%;
     border: 1px solid var(--white-2);
+    overflow: hidden;
   }
   a
   header {
@@ -38,7 +39,8 @@ li.project-cards {
   footer {
     display: flex;
     gap: 4px;
-    width: 100%;
+    width:inherit;
+    flex-wrap: wrap;
     span {
       display: flex;
       justify-content: center;
