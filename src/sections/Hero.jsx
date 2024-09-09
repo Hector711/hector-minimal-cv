@@ -71,41 +71,33 @@ export default function Hero() {
                 />
               </>
             )}
-            {/* {profiles.map((item, i) => {
-              const Icon = SOCIAL_ICONS[item.network];
-              return (
-                <a key={i} className='hoverr social-links'>
-                  {Icon}
-                </a>
-              );
-            })} */}
             {profiles.map((item, i) => {
               const Icon = SOCIAL_ICONS[item.network];
               return (
                 <a
                   key={i}
-                  href={item.url} // Añade la URL del perfil
+                  href={item.url} 
                   className='hoverr social-links'
-                  target='_blank' // Abre en una nueva pestaña
-                  rel='noopener noreferrer' // Seguridad adicional
+                  target='_blank'
+                  rel='noopener noreferrer'
                 >
                   {Icon}
                 </a>
               );
             })}
           </div>
-          {basics.url && (
+          {basics.web_url && (
             <a
               id='web-page'
               target='_blank'
               title='Visitar la pagina web de '
-              href={basics.url}
+              href={basics.web_url}
               className='hoverr social-links'
             >
               <p className='bold'>{t('translations:web_page')}</p>
             </a>
           )}
-          {basics.calendly && (
+          {basics.calendly_url && (
             <>
               <button
                 id='calendly'
@@ -115,7 +107,7 @@ export default function Hero() {
                 <p className='bold'>{t('translations:reservar_llamada')}</p>
               </button>
               <PopupModal
-                url={basics.calendly}
+                url={basics.calendly_url}
                 rootElement={document.getElementById('root')}
                 text='Reservar Llamada'
                 onModalClose={() => setCalendlyPopUp(false)}
