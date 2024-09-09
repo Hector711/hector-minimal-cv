@@ -8,7 +8,7 @@ export default i18n
     resources: {},
     lng: 'ES',
     fallbackLng: 'ES',
-    ns: ['basics', 'education'],
+    ns: ['basics', 'education', 'languages', 'profiles', 'projects', 'work'],
     interpolation: {
       escapeValue: false
     }
@@ -24,7 +24,6 @@ export async function loadTranslations() {
     console.error('Error al cargar traducciones de Basics:', basicsError);
     return;
   }
-  console.log("Basics:", basics);
 
   // EDUCATION
   const { data: education, error: educationError } = await supabase
@@ -35,7 +34,6 @@ export async function loadTranslations() {
     console.error('Error al cargar traducciones de Education:', educationError);
     return;
   }
-  console.log("Education:", education);
 
   // LANGUAGES
   const { data: languages, error: languagesError } = await supabase
@@ -46,7 +44,6 @@ export async function loadTranslations() {
     console.error('Error al cargar traducciones de Languages:', languagesError);
     return;
   }
-  console.log("Languages:", languages);
 
   const { data: profiles, error: profilesError } = await supabase
     .from('Profiles')
@@ -56,7 +53,6 @@ export async function loadTranslations() {
     console.error('Error al cargar traducciones de Profiles:', profilesError);
     return;
   }
-  console.log("data (Profiles):", profiles);
 
   const { data: projects, error: projectsError } = await supabase
     .from('Projects')
@@ -66,7 +62,6 @@ export async function loadTranslations() {
     console.error('Error al cargar traducciones de Projects:', projectsError);
     return;
   }
-  console.log("data (Projects):", projects);
 
   const { data: work, error: workError } = await supabase
     .from('Work')
@@ -76,7 +71,6 @@ export async function loadTranslations() {
     console.error('Error al cargar traducciones de Work:', workError);
     return;
   }
-  console.log("data (Work):", work);
 
   const resources = {};
 

@@ -1,15 +1,13 @@
 import React from 'react';
 import ModelSection from '@/components/ModelSection';
-import cv from '@/../cv-es.json';
 import Dot from '@/assets/icons/Dot';
 
-const { work } = cv;
 
 export default function Experience() {
   return (
     <ModelSection sectionTitle='Experiencia' className='experience'>
       <ul>
-        {work.map(
+        {/* {work.map(
           ({ company, startDate, endDate, position, url, summary }, i) => {
             const startYear = new Date(startDate).getFullYear();
             const endYear =
@@ -36,7 +34,7 @@ export default function Experience() {
               </li>
             );
           },
-        )}
+        )} */}
       </ul>
     </ModelSection>
   );

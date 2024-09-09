@@ -8,30 +8,26 @@ import Mail from '@/assets/icons/Mail.jsx';
 import LinkedIn from '@/assets/icons/LinkedIn.jsx';
 import Location from '@/assets/icons/Location.jsx';
 import GitHub from '@/assets/icons/GitHub.jsx';
-import cv from '@/../cv-es.json';
 import { PopupModal } from 'react-calendly';
 import { useState } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 import { useTranslation } from 'react-i18next';
+import i18n from '@/i18n/i18n';
 
-const notify = () =>
-  toast('Email copiado al portapapeles: hectorluengo.xx@gmail.com');
-
-const basics = cv.basics;
-const rrss = basics.rrss;
 
 export default function Hero() {
-  const { t } = useTranslation();
+  
+  const notify = () =>
+    toast(`Email copiado al portapapeles: ${t('basics:email')}`);
   const [calendlyPopUp, setCalendlyPopUp] = useState(false);
 
-  // const { t } = useTranslation(['basics', 'education', 'languages', 'profiles', 'projects']);
+  const { t, i18n } = useTranslation();
 
-  // const education = t('education', { returnObjects: true });
-  // const languages = t('languages', { returnObjects: true });
-  // const profiles = t('profiles', { returnObjects: true });
-  // const projects = t('projects', { returnObjects: true });
+  const language = i18n.language;
 
-
+  console.log(useTranslation())
+  console.log('profiles:',i18n.getDataByLanguage(language, 'profiles'))
+  // const profiles = i18n.getResourceBundle(language, 'profiles')
 
   const SOCIAL_ICONS = {
     Instagram: <Instagram />,
@@ -46,12 +42,12 @@ export default function Hero() {
     <ModelSection className='hero'>
       <div className='info'>
         <header>
-          <h1>Héctor Guerra</h1>
+          <h1>{t('basics:name')}</h1>
           <h3>{t('basics:label')}</h3>
         </header>
         <span>
           <Location />
-          <h5>Madrid, Spain.</h5>
+          <h5>{t('basics:city')}, {t('basics:country')}.</h5>
         </span>
         <footer id='print'>
           <p>Email: </p>
@@ -60,7 +56,7 @@ export default function Hero() {
         </footer>
         <footer className='no-print' id='social-links'>
           <div id='social-links'>
-            {basics.email &&
+            {t('basics:email') &&
             (
               <>
                 <button onClick={notify} className='hoverr social-links'>
@@ -75,16 +71,19 @@ export default function Hero() {
                 />
               </>
             )}
-            {rrss.map((item, i) => {
+            {/* {profiles.map((item, i) => {
               const Icon = SOCIAL_ICONS[item.network];
               return (
                 <a key={i} className='hoverr social-links'>
                   {Icon}
                 </a>
               );
-            })}
+            })} */}
+
+
+            
           </div>
-          {basics.url && (
+          {/* {basics.url && (
             <a
               id='web-page'
               target='_blank'
@@ -94,8 +93,8 @@ export default function Hero() {
             >
               <p className='bold'>Página Web</p>
             </a>
-          )}
-          {basics.calendly && (
+          )} */}
+          {/* {basics.calendly && (
             <>
               <button
                 id='calendly'
@@ -112,7 +111,7 @@ export default function Hero() {
                 open={calendlyPopUp}
               />
             </>
-          )}
+          )} */}
         </footer>
       </div>
       <figure id='avatar'>
