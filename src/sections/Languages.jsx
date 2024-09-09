@@ -1,13 +1,11 @@
 import React from 'react';
 import ModelSection from '@/components/ModelSection';
-import cv from '@/../cv-es.json';
 
-const { languages } = cv;
 export default function Languages() {
   return (
     <ModelSection sectionTitle='Idiomas' className='languages'>
       <ul>
-        {languages.map(({ language, fluency }, i) => {
+        {/* {languages.map(({ language, fluency }, i) => {
           return (
             <li key={i} className='language-cards'>
               <header>
@@ -17,7 +15,7 @@ export default function Languages() {
               </header>
             </li>
           );
-        })}
+        })} */}
       </ul>
     </ModelSection>
   );

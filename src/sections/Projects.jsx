@@ -1,13 +1,12 @@
 import React from 'react';
 import ModelSection from '@/components/ModelSection';
-import cv from '@/../cv-es.json';
-const { projects } = cv;
+
 
 export default function Projects() {
   return (
     <ModelSection sectionTitle='Proyectos' className='projects'>
       <ul>
-        {projects.map(({ name, url, isActive, highlights, description }, i ) => {
+        {/* {projects.map(({ name, url, isActive, highlights, description }, i ) => {
           return (
             <li className='project-cards ' key={i}>
               <a href={url} target='_blank' className='hoverr' title={`Ver el proyecto ${name}`}>
@@ -26,7 +25,7 @@ export default function Projects() {
               </a>
             </li>
           );
-        })}
+        })} */}
       </ul>
     </ModelSection>
   );

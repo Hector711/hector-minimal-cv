@@ -1,8 +1,6 @@
 import React from 'react';
 import ModelSection from '@/components/ModelSection';
-import cv from '@/../cv-es.json';
 import Dot from '@/assets/icons/Dot';
-const { education } = cv;
 import { useTranslation } from 'react-i18next';
 
 
@@ -11,7 +9,7 @@ export default function Education() {
   return (
     <ModelSection sectionTitle='Formación' className='education'>
       <ul>
-        {education.map(({ name, institution, endDate, url }, i) => {
+        {/* {education.map(({ name, institution, endDate, url }, i) => {
           return (
             <li key={i}>
               <article className='job-cards'>
@@ -35,7 +33,7 @@ export default function Education() {
               </article>
             </li>
           );
-        })}
+        })} */}
       </ul>
     </ModelSection>
   );
