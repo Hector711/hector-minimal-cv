@@ -27,12 +27,16 @@ import '@/css/init.css';
 import '@/css/comp-navbar.css';
 import '@/css/comp-footer.css';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <Suspense fallback={<div>Loading...</div>}>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-    </Suspense>
-  </React.StrictMode>,
-);
+import { loadTranslations } from '@/i18n/i18n';
+
+loadTranslations().then(() => {
+  ReactDOM.createRoot(document.getElementById('root')).render(
+    <React.StrictMode>
+      <Suspense fallback={<div>Loading...</div>}>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </Suspense>
+    </React.StrictMode>,
+  );
+});

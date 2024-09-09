@@ -23,6 +23,16 @@ const rrss = basics.rrss;
 export default function Hero() {
   const { t } = useTranslation();
   const [calendlyPopUp, setCalendlyPopUp] = useState(false);
+
+  // const { t } = useTranslation(['basics', 'education', 'languages', 'profiles', 'projects']);
+
+  // const education = t('education', { returnObjects: true });
+  // const languages = t('languages', { returnObjects: true });
+  // const profiles = t('profiles', { returnObjects: true });
+  // const projects = t('projects', { returnObjects: true });
+
+
+
   const SOCIAL_ICONS = {
     Instagram: <Instagram />,
     YouTube: <YouTube />,
@@ -37,7 +47,7 @@ export default function Hero() {
       <div className='info'>
         <header>
           <h1>Héctor Guerra</h1>
-          <h3>{t('cv:basics.label')}</h3>
+          <h3>{t('basics:label')}</h3>
         </header>
         <span>
           <Location />

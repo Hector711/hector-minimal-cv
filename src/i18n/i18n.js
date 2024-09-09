@@ -1,23 +1,183 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-import Backend from 'i18next-http-backend';
-import LanguageDetector from 'i18next-browser-languagedetector';
+import supabase from '@/api/supabase.js';
 
-const locales = '/locales' || import.meta.env.VITE_LOCALES
-
-i18n
-  .use(LanguageDetector)
+export default i18n
   .use(initReactI18next)
-  .use(Backend)
   .init({
-    debug: true,
-    lng:  'es',
-    fallbackLng: "es",
+    resources: {},
+    lng: 'ES',
+    fallbackLng: 'ES',
+    ns: ['basics', 'education'],
     interpolation: {
-      escapeValue: false,
-    },
-    ns:['translations', 'cv'],
-    backend: {
-      loadPath: `${locales}/{{lng}}/{{ns}}.json`,
-    },
+      escapeValue: false
+    }
   });
+
+export async function loadTranslations() {
+  // BASICS
+  const { data: basics, error: basicsError } = await supabase
+    .from('Basics')
+    .select('*');
+
+  if (basicsError) {
+    console.error('Error al cargar traducciones de Basics:', basicsError);
+    return;
+  }
+  console.log("Basics:", basics);
+
+  // EDUCATION
+  const { data: education, error: educationError } = await supabase
+    .from('Education')
+    .select('*');
+
+  if (educationError) {
+    console.error('Error al cargar traducciones de Education:', educationError);
+    return;
+  }
+  console.log("Education:", education);
+
+  // LANGUAGES
+  const { data: languages, error: languagesError } = await supabase
+    .from('Languages')
+    .select('*');
+
+  if (languagesError) {
+    console.error('Error al cargar traducciones de Languages:', languagesError);
+    return;
+  }
+  console.log("Languages:", languages);
+
+  const { data: profiles, error: profilesError } = await supabase
+    .from('Profiles')
+    .select('*');
+
+  if (profilesError) {
+    console.error('Error al cargar traducciones de Profiles:', profilesError);
+    return;
+  }
+  console.log("data (Profiles):", profiles);
+
+  const { data: projects, error: projectsError } = await supabase
+    .from('Projects')
+    .select('*');
+
+  if (projectsError) {
+    console.error('Error al cargar traducciones de Projects:', projectsError);
+    return;
+  }
+  console.log("data (Projects):", projects);
+
+  const { data: work, error: workError } = await supabase
+    .from('Work')
+    .select('*');
+
+  if (workError) {
+    console.error('Error al cargar traducciones de Work:', workError);
+    return;
+  }
+  console.log("data (Work):", work);
+
+  const resources = {};
+
+  // Procesar datos de Basics
+  basics.forEach(item => {
+    if (!resources[item.lng]) {
+      resources[item.lng] = { basics: {}, education: [], languages: [], profiles: [], projects: [], work: [] };
+    }
+    // Añadir todas las propiedades del objeto a la traducción
+    Object.keys(item).forEach(key => {
+      if (key !== 'lng' && key !== 'id') { // Excluir 'lng' e 'id'
+        resources[item.lng].basics[key] = item[key];
+      }
+    });
+  });
+
+  // Procesar datos de Education
+  education.forEach(item => {
+    if (!resources[item.lng]) {
+      resources[item.lng] = { basics: {}, education: [], languages: [], profiles: [], projects: [], work: [] };
+    }
+    // Añadir el objeto completo al array de education
+    const educationItem = {};
+    Object.keys(item).forEach(key => {
+      if (key !== 'lng' && key !== 'id') { // Excluir 'lng' e 'id'
+        educationItem[key] = item[key];
+      }
+    });
+    resources[item.lng].education.push(educationItem);
+  });
+
+  // Procesar datos de Languages
+  languages.forEach(item => {
+    if (!resources[item.lng]) {
+      resources[item.lng] = { basics: {}, education: [], languages: [], profiles: [], projects: [], work: [] };
+    }
+    // Añadir el objeto completo al array de languages
+    const languageItem = {};
+    Object.keys(item).forEach(key => {
+      if (key !== 'lng' && key !== 'id') { // Excluir 'lng' e 'id'
+        languageItem[key] = item[key];
+      }
+    });
+    resources[item.lng].languages.push(languageItem);
+  });
+
+  // Procesar datos de Profiles
+  profiles.forEach(item => {
+    if (!resources[item.lng]) {
+      resources[item.lng] = { basics: {}, education: [], languages: [], profiles: [], projects: [], work: [] };
+    }
+    // Añadir el objeto completo al array de profiles
+    const profileItem = {};
+    Object.keys(item).forEach(key => {
+      if (key !== 'lng' && key !== 'id') { // Excluir 'lng' e 'id'
+        profileItem[key] = item[key];
+      }
+    });
+    resources[item.lng].profiles.push(profileItem);
+  });
+
+  // Procesar datos de Projects
+  projects.forEach(item => {
+    if (!resources[item.lng]) {
+      resources[item.lng] = { basics: {}, education: [], languages: [], profiles: [], projects: [], work: [] };
+    }
+    // Añadir el objeto completo al array de projects
+    const projectItem = {};
+    Object.keys(item).forEach(key => {
+      if (key !== 'lng' && key !== 'id') { // Excluir 'lng' e 'id'
+        projectItem[key] = item[key];
+      }
+    });
+    resources[item.lng].projects.push(projectItem);
+  });
+
+  // Procesar datos de Work
+  work.forEach(item => {
+    if (!resources[item.lng]) {
+      resources[item.lng] = { basics: {}, education: [], languages: [], profiles: [], projects: [], work: [] };
+    }
+    // Añadir el objeto completo al array de work
+    const workItem = {};
+    Object.keys(item).forEach(key => {
+      if (key !== 'lng' && key !== 'id') { // Excluir 'lng' e 'id'
+        workItem[key] = item[key];
+      }
+    });
+    resources[item.lng].work.push(workItem);
+  });
+
+  Object.keys(resources).forEach(lang => {
+    i18n.addResourceBundle(lang, 'basics', resources[lang].basics, true, true);
+    i18n.addResourceBundle(lang, 'education', resources[lang].education, true, true);
+    i18n.addResourceBundle(lang, 'languages', resources[lang].languages, true, true);
+    i18n.addResourceBundle(lang, 'profiles', resources[lang].profiles, true, true);
+    i18n.addResourceBundle(lang, 'projects', resources[lang].projects, true, true);
+    i18n.addResourceBundle(lang, 'work', resources[lang].work, true, true);
+  });
+  console.log("resources:", resources);
+}
+
+
+
