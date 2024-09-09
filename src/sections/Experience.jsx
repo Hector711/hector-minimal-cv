@@ -1,18 +1,21 @@
 import React from 'react';
 import ModelSection from '@/components/ModelSection';
 import Dot from '@/assets/icons/Dot';
-
+import { useTranslation } from 'react-i18next';
 
 export default function Experience() {
+  const { t, i18n } = useTranslation();
+  const language = i18n.language;
+  const workObject = i18n.getResourceBundle(language, 'work');
+  const work = Object.values(workObject);
+  
   return (
-    <ModelSection sectionTitle='Experiencia' className='experience'>
+    <ModelSection sectionTitle={t('translations:work')} className='experience'>
       <ul>
-        {/* {work.map(
-          ({ company, startDate, endDate, position, url, summary }, i) => {
-            const startYear = new Date(startDate).getFullYear();
-            const endYear =
-              endDate != null ? new Date(endDate).getFullYear() : 'Actual';
-            const years = `${startYear} - ${endYear}`;
+        {work.map(
+          ({ company, start_date, end_date, position, url, summary }, i) => {
+            const startDate = new Date(start_date).toLocaleDateString('en-US', { year: 'numeric', month: 'short' });
+            const endDate = end_date != null ? new Date(end_date).toLocaleDateString('en-US', { year: 'numeric', month: 'short' }) : 'Actual';
             return (
               <li key={i} className='experience-cards'>
                 <article>
@@ -25,7 +28,7 @@ export default function Experience() {
                         <h3>{company}</h3>
                       </a>
                     </span>
-                    <time>{years}</time>
+                    <time>{startDate} - {endDate}</time>
                   </header>
                   <section>
                     <p>{summary}</p>
@@ -34,7 +37,7 @@ export default function Experience() {
               </li>
             );
           },
-        )} */}
+        )}
       </ul>
     </ModelSection>
   );

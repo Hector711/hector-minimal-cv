@@ -4,12 +4,17 @@ import Dot from '@/assets/icons/Dot';
 import { useTranslation } from 'react-i18next';
 
 
+
 export default function Education() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const language = i18n.language;
+  const educationObject = i18n.getResourceBundle(language, 'education');
+  const education = Object.values(educationObject);
+
   return (
-    <ModelSection sectionTitle='Formación' className='education'>
+    <ModelSection sectionTitle={t('translations:education')} className='education'>
       <ul>
-        {/* {education.map(({ name, institution, endDate, url }, i) => {
+        {education.map(({ name, institution, end_date, url }, i) => {
           return (
             <li key={i}>
               <article className='job-cards'>
@@ -18,7 +23,6 @@ export default function Education() {
                   <span>
                     <h3>{name}</h3>
                     <span>en</span>
-
                     <a
                       className='institutions'
                       href={url}
@@ -28,12 +32,12 @@ export default function Education() {
                       <h3>{institution}</h3>
                     </a>
                   </span>
-                  <time>{endDate}</time>
+                  <time>{ new Date(end_date).toLocaleDateString('en-US', { year: 'numeric', month: 'short' }) }</time>
                 </header>
               </article>
             </li>
           );
-        })} */}
+        })}
       </ul>
     </ModelSection>
   );
