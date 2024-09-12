@@ -27,7 +27,6 @@ export default function Hero() {
 
   const basics = i18n.getResourceBundle(language, 'basics');
 
-
   const SOCIAL_ICONS = {
     Instagram: <Instagram />,
     YouTube: <YouTube />,

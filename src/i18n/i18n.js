@@ -46,7 +46,7 @@ export async function loadTranslations() {
         education: 'Formación',
         languages: 'Idiomas',
         work: 'Experiencia Laboral',
-        web_page: 'Visitar la pagina web',
+        web_page: 'Página web',
       },
       basics: (({ id, lng, ...rest }) => rest)(dataSupabase.basics.find(item => item.lng === 'ES')),
       education: dataSupabase.education.filter(item => item.lng === 'ES').map(({ id, lng, ...rest }) => rest),
