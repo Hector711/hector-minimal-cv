@@ -22,7 +22,7 @@ export default function Education() {
                   <Dot />
                   <span>
                     <h3>{name}</h3>
-                    <span>en</span>
+                    <span>{t('translations:at')}</span>
                     <a
                       className='institutions'
                       href={url}

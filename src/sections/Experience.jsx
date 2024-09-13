@@ -23,7 +23,7 @@ export default function Experience() {
                     <Dot />
                     <span>
                       <h3>{position}</h3>
-                      <span id='lightWeight'>en</span>
+                      <span id='lightWeight'>{t('translations:at')}</span>
                       <a href={url} target='_blank' className='companies'>
                         <h3>{company}</h3>
                       </a>
