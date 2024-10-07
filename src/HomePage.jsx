@@ -7,7 +7,7 @@ import Languages from '@/sections/Languages';
 
 export default function HomePage() {
   return (
-    <main className='animate-fade-in-up' id='body-main'>
+    <main className='animate-fade-in-up animate-delay-300 animate-duration-900' id='body-main'>
       <Hero />
       <About />
       <Projects />
