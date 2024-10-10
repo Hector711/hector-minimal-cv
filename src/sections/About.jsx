@@ -6,7 +6,7 @@ export default function About() {
   const { t } = useTranslation();
 
   return (
-    <ModelSection sectionTitle={t('translations:about_me')} className='about'>
+    <ModelSection title={t('translations:about_me')} id='about'>
       <p>{t('basics:about')}</p>
     </ModelSection>
   );

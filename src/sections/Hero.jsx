@@ -37,24 +37,19 @@ export default function Hero() {
     X: <X />,
   };
   return (
-    <ModelSection className='hero'>
-      <div className='info'>
+    <ModelSection id='hero' >
+      <div className='info '>
         <header>
           <h1>{t('basics:name')}</h1>
           <h3>{t('basics:label')}</h3>
         </header>
-        <span>
+        <span >
           <Location />
           <h5>
             {t('basics:city')}, {t('basics:country')}.
           </h5>
         </span>
-        <footer id='print'>
-          <p>Email: </p>
-          <p>LinkedIn: </p>
-          <p>GitHub: </p>
-        </footer>
-        <footer className='no-print' id='social-links'>
+        <footer  id='social-links'>
           <div id='social-links'>
             {t('basics:email') && (
               <>
@@ -116,7 +111,7 @@ export default function Hero() {
           )}
         </footer>
       </div>
-      <figure id='avatar'>
+      <figure id='avatar' >
         <img
           src={basics.image}
           alt='Héctor Avatar'

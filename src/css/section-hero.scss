@@ -1,25 +1,38 @@
-section.hero {
+section#hero {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  svg.icons {
-    width: 1.4rem;
-    height: 1.4rem;
-  }
-  div#section-main.hero {
-    display: flex;
-    flex-direction: row ;
-    align-items: center;
+  @include respond-to(tablet) {
+    flex-direction: column-reverse;
+    
+    h1 {
+      text-align: center;
+    }
+    h3 {
+      text-align: center;
+    }
+    span {
+      display: flex;
+      justify-content: center;
+    }
+    div.info {
+      align-items: center;
+    }
   }
 }
 div.info {
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
+
   header {
     display: flex;
     flex-direction: column;
+  }
+  svg.icons {
+    width: 1.4rem;
+    height: 1.4rem;
   }
 }
 footer#social-links {
@@ -27,22 +40,23 @@ footer#social-links {
   display: flex;
   gap: 0.5rem;
   flex-direction: column;
+  
   div#social-links {
     display: flex;
     gap: 0.5rem;
   }
   .social-links, #calendly {
-    border-radius: var(--border-s);
+    border-radius: $border-s;
     transition: all 0.3s ease-in-out;
     padding: 0.3rem;
     width: 2.2rem;
     height: 2.2rem;
   }
   svg.icons.fill {
-    fill: var(--black-2);
+    fill: $black-2;
   }
   svg.icons.stroke {
-    stroke: var(--black-2);
+    stroke: $black-2;
   }
   svg.icons {
     width: 100%;
@@ -74,34 +88,11 @@ figure#avatar{
   }
 }
 
-@media screen and (max-width: 670px) {
-  .container {
-    display: flex;
-    flex-direction: column-reverse;
-  }
-  .container * {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  footer a {
-    height: 40px;
-    width: 40px;
-  }
-  a > p {
-    font-size: 1.05rem;
-    font-weight: 500;
-  }
-  h1 {
-    text-align: center;
-  }
-}
-
 .toasts-container {
-  margin-block: var(--nav-height);
+  margin-block: $nav-height;
   height: 85vh;
 }
 .toasts {
-  background-color: var(--white-0);
+  background-color: $white-0;
   width: max-content;
 }

@@ -1,0 +1,40 @@
+section#education {
+  * {
+    // border: 1px solid red;
+  }
+  ul#education-container {
+    display: flex;
+    flex-direction: column;
+    gap: $gap-l;
+    li {
+      display: flex;
+    }
+  }
+}
+article.education-cards {
+  display: flex;
+  width: 100%;
+  header {
+    display: flex;
+    width: 100%;
+    div.title-card {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      width: 100%;
+      * {
+        font-size: 1.1rem;
+        white-space: nowrap;
+      }
+    }
+    time {
+      margin-left: auto;
+      white-space: nowrap;
+      @include respond-to(mobile) {
+        white-space: wrap;
+      text-align: right;
+      }
+    }
+  }
+}

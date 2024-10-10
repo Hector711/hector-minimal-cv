@@ -1,5 +1,7 @@
+// @import '_variables.scss';
+
 h1, h2 {
-  color: var(--black-1);
+  color: $black-1;
 }
 /* NOMBRE DE PERFIL */
 h1 {
@@ -25,7 +27,7 @@ h3 {
 h4{
   font-size: 1.1rem;
   font-weight: 750;
-  color: var(--black-2);
+  color: $black-2;
 }
 
 p {
@@ -54,3 +56,19 @@ label {
   border-radius: 4px;
   font-size: 13px;
 }
+svg#dot {
+  max-width: $dot-size;
+  width: 100%;
+  height: max-content;
+}
+
+
+.hoverr:hover {
+  background-color: $white-0 !important;
+  border: $border-width solid $white-0 !important;
+}
+.hoverr {
+  border: $border-width solid $white-2;
+  transition: all 0.3s ease-in-out;
+}
+

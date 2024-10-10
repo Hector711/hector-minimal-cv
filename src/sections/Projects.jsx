@@ -12,8 +12,8 @@ export default function Projects() {
 
 
   return (
-    <ModelSection sectionTitle={t('translations:projects')} className='projects'>
-      <ul>
+    <ModelSection title={t('translations:projects')} id='projects'>
+      <ul id='projects-container'>
         {projects.map(({ name, url, active, highlights, description }, i ) => {
           return (
             <li className='project-cards ' key={i}>
@@ -25,7 +25,7 @@ export default function Projects() {
                   </h4>
                   <p>{description}</p>
                 </header>
-                <footer>
+                <footer className='highlights-container'>
                   {highlights.map((highlight, i) => {
                     return <span key={i}>{highlight}</span>;
                   })}

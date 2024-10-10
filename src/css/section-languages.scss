@@ -1,0 +1,30 @@
+section#languages {
+  ul#languages-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}
+
+article.language-cards {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 8px;
+  border: $border-width solid $white-2;
+  padding: 10px 13px;
+  gap: 10px;
+  span {
+    font-weight: 700;
+  }
+  p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    font-size: 1.1rem;
+  }
+}

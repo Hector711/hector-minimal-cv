@@ -1,7 +1,7 @@
-section.projects {
-  ul {
+section#projects {
+  ul#projects-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1rem;
   }
 }
@@ -15,7 +15,7 @@ li.project-cards {
     flex-direction: column;
     padding: 16px;
     height: 100%;
-    border: 1px solid var(--white-2);
+    border: $border-width solid $white-2;
     overflow: hidden;
   }
   a
@@ -33,7 +33,7 @@ li.project-cards {
       margin-bottom: 4px;
     }
     span {
-      color: var(--green);
+      color: $green;
     }
   }
   footer {

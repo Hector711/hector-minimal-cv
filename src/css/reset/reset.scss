@@ -20,6 +20,11 @@ body {
   /* usa uno u otro dependiendo del contexto */
   /* height: 100%; */
   height: max-content;
+  font-family: 'Nunito Sans Variable', 'Onest Variable', 
+  Avenir, Helvetica, Arial;
+  background-color: $white-1;
+  color: $black-2
+  
 }
 html {
   position: relative;
@@ -30,6 +35,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  padding-inline: $margin-inline;
 }
 *,
 *::before,

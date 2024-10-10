@@ -9,19 +9,19 @@ footer#body-footer {
   margin-inline: auto;
   transition: all 0.3s ease;
   bottom: 0;
-  box-shadow: 0 -1px 2px 0px var(--white-2);
+  box-shadow: 0 -1px 2px 0px $white-2;
 }
 
 #footer-container {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  max-width: var(--width);
+  max-width: $width;
   a {
     display: flex;
     gap: 5px;
-    border: 1px solid var(--black-2);
-    border-radius: var(--border-s);
+    border: 1px solid $black-2;
+    border-radius: $border-s;
     padding: 0.3rem 0.6rem;
 
   }
@@ -36,12 +36,12 @@ footer#body-footer {
   svg.icons.fill {
     width: 1.2rem;
     height: 1.2rem;
-    fill: var(--black-2);
+    fill: $black-2;
   }
   svg.icons.stroke {
     width: 1.2rem;
     height: 1.2rem;
-    stroke: var(--black-2);
+    stroke: $black-2;
   }
 }
 #footer-container * {
@@ -49,9 +49,3 @@ footer#body-footer {
   justify-content: center;
   align-items: center;
 }
-
-/* @media print {
-  nav {
-    display: none;
-  }
-} */

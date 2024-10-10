@@ -2,13 +2,13 @@ import React from 'react';
 
 export default function ModelSection({
   children,
-  sectionTitle,
-  className,
+  title,
+  id,
 }) {
   return (
-    <section id='section-model' className={className}>
-      {sectionTitle && <h2>{sectionTitle}</h2>}
-      <div id='section-main' className={className}>{children}</div>
+    <section className='model' id={id}>
+      {title && <h2>{title}</h2>}
+      {children}
     </section>
   );
 }

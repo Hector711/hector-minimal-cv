@@ -3,8 +3,6 @@ import ModelSection from '@/components/ModelSection';
 import Dot from '@/assets/icons/Dot';
 import { useTranslation } from 'react-i18next';
 
-
-
 export default function Education() {
   const { t, i18n } = useTranslation();
   const language = i18n.language;
@@ -12,17 +10,17 @@ export default function Education() {
   const education = Object.values(educationObject);
 
   return (
-    <ModelSection sectionTitle={t('translations:education')} className='education'>
-      <ul>
+    <ModelSection title={t('translations:education')} id='education'>
+      <ul id='education-container'>
         {education.map(({ name, institution, end_date, url }, i) => {
           return (
             <li key={i}>
-              <article className='job-cards'>
+              <Dot />
+              <article className='education-cards'>
                 <header>
-                  <Dot />
-                  <span>
-                    <h3>{name}</h3>
-                    <span>{t('translations:at')}</span>
+                  <div className='title-card'>
+                    <h3>{name}</h3>&nbsp;
+                    <span>{t('translations:at')}</span>&nbsp;
                     <a
                       className='institutions'
                       href={url}
@@ -31,8 +29,13 @@ export default function Education() {
                     >
                       <h3>{institution}</h3>
                     </a>
-                  </span>
-                  <time>{ new Date(end_date).toLocaleDateString('en-US', { year: 'numeric', month: 'short' }) }</time>
+                  </div>
+                  <time>
+                    {new Date(end_date).toLocaleDateString('en-US', {
+                      year: 'numeric',
+                      month: 'short',
+                    })}
+                  </time>
                 </header>
               </article>
             </li>

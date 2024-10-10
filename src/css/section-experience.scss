@@ -1,0 +1,55 @@
+section#experience {
+  ul#experience-container {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    li {
+      display: flex;
+    }
+  }
+}
+article.experience-cards {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  header {
+    display: flex;
+    width: 100%;
+    div.title-card {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      width: 100%;
+      * {
+        font-size: 1.1rem;
+        white-space: nowrap;
+      }
+    }
+    time {
+      margin-left: auto;
+      white-space: nowrap;
+      @include respond-to(mobile) {
+        white-space: wrap;
+        text-align: right;
+      }
+    }
+  }
+}
+section {
+  p {
+    font-size: 0.9rem;
+    line-height: 1.3rem;
+    margin-top: 2px;
+  }
+}
+
+a.companies,
+a.institutions {
+  transition: all 0.3s ease-in-out;
+}
+a.companies:hover,
+a.institutions:hover {
+  text-decoration: underline;
+  color: $black-0;
+}

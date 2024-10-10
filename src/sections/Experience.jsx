@@ -8,31 +8,40 @@ export default function Experience() {
   const language = i18n.language;
   const workObject = i18n.getResourceBundle(language, 'work');
   const work = Object.values(workObject);
-  
+
   return (
-    <ModelSection sectionTitle={t('translations:work')} className='experience'>
-      <ul>
+    <ModelSection title={t('translations:work')} id='experience'>
+      <ul id='experience-container'>
         {work.map(
           ({ company, start_date, end_date, position, url, summary }, i) => {
-            const startDate = new Date(start_date).toLocaleDateString('en-US', { year: 'numeric', month: 'short' });
-            const endDate = end_date != null ? new Date(end_date).toLocaleDateString('en-US', { year: 'numeric', month: 'short' }) : 'Actual';
+            const startDate = new Date(start_date).toLocaleDateString('en-US', {
+              year: 'numeric',
+              month: 'short',
+            });
+            const endDate =
+              end_date != null
+                ? new Date(end_date).toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'short',
+                  })
+                : 'Actual';
             return (
-              <li key={i} className='experience-cards'>
-                <article>
+              <li key={i} >
+                <Dot />
+                <article className='experience-cards'>
                   <header>
-                    <Dot />
-                    <span>
-                      <h3>{position}</h3>
-                      <span id='lightWeight'>{t('translations:at')}</span>
+                    <div className='title-card'>
+                      <h3>{position}</h3>&nbsp;
+                      <span id='lightWeight'>{t('translations:at')}</span>&nbsp;
                       <a href={url} target='_blank' className='companies'>
                         <h3>{company}</h3>
                       </a>
-                    </span>
-                    <time>{startDate} - {endDate}</time>
+                    </div>
+                    <time>
+                      {startDate} - {endDate}
+                    </time>
                   </header>
-                  <section>
-                    <p>{summary}</p>
-                  </section>
+                  <p>{summary}</p>
                 </article>
               </li>
             );

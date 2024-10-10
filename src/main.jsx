@@ -10,22 +10,23 @@ import '@fontsource-variable/nunito-sans';
 // Supports weights 300-900
 import '@fontsource-variable/figtree';
 
-// SECTIONS
-import '@/css/section-hero.css';
-import '@/css/section-projects.css';
-import '@/css/section-education.css';
-import '@/css/section-languages.css';
-import '@/css/section-experience.css';
+// CSS
+import '@/css/reset/reset.scss';
+import '@/css/init.scss';
 
 // MODEL
-import '@/css/model-section.css';
+import '@/css/model-section.scss';
 
-// CSS
-import '@/css/0/reset.css';
-import '@/css/elements.css';
-import '@/css/init.css';
-import '@/css/comp-navbar.css';
-import '@/css/comp-footer.css';
+// SECTIONS
+import '@/css/section-hero.scss';
+import '@/css/section-projects.scss';
+import '@/css/section-education.scss';
+import '@/css/section-languages.scss';
+import '@/css/section-experience.scss';
+
+// COMPONENTS
+import '@/css/comp-navbar.scss';
+import '@/css/comp-footer.scss';
 
 import { loadTranslations } from '@/i18n/i18n';
 

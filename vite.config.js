@@ -10,4 +10,11 @@ export default defineConfig({
     },
   },
   publicDir: 'public',
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@import "@/css/reset/_variables.scss";`,
+      },
+    },
+  },
 });
