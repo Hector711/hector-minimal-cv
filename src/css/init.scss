@@ -63,12 +63,18 @@ svg#dot {
 }
 
 
-.hoverr:hover {
-  background-color: $white-0 !important;
-  border: $border-width solid $white-0 !important;
-}
-.hoverr {
-  border: $border-width solid $white-2;
-  transition: all 0.3s ease-in-out;
-}
+// // .hoverr {
+//   //   border: $border-width solid $white-2;
+//   //   transition: all 0.3s ease-in-out;
+//   // }
+//   .hoverr:hover {
+//     background-color: $white-0 !important;
+//     border: $border-width solid $white-0 !important;
+//   }
 
+svg.icons-fill {
+  fill: $black-2;
+}
+svg.icons-stroke {
+  stroke: $black-2;
+}

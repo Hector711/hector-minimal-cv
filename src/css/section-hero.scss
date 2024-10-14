@@ -27,6 +27,9 @@ div.info {
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
+  * {
+    // border: 1px solid $black-2;
+  }
 
   header {
     display: flex;
@@ -43,31 +46,29 @@ footer#social-links {
   gap: 0.5rem;
   flex-direction: column;
   
-  div#social-links {
+  div#social-links-container {
     display: flex;
     gap: 0.5rem;
   }
-  .social-links, #calendly {
-    border-radius: $border-s;
+  .social-links {
     transition: all 0.3s ease-in-out;
-    padding: 0.3rem;
-    width: 2.2rem;
-    height: 2.2rem;
+    width: 2rem;
+    height: 2rem;
+    @include buttons-style;
+    &:hover {
+      @include buttons-style-hover;
+    }
   }
-  svg.icons.fill {
-    fill: $black-2;
-  }
-  svg.icons.stroke {
-    stroke: $black-2;
-  }
-  svg.icons {
-    width: 100%;
-    height: 100%;
-  }
-  a#web-page, button#calendly{
-    text-align: center;
+  a#web-page, a#calendly-btn {
     width: 100% !important;
     text-wrap: nowrap;
+    @include buttons-style;
+    &:hover {
+      @include buttons-style-hover;
+    }
+    p {
+      @include bold-text;
+    }
   }
 }
 

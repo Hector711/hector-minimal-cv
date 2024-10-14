@@ -27,12 +27,12 @@ import '@/css/comp-navbar.scss';
 import '@/css/comp-footer.scss';
 
 // PAGES
-// import { loadTranslations } from '@/i18n/i18n';
+import { loadTranslations } from '@/i18n/i18n';
 
-// loadTranslations().then(() => {
+loadTranslations().then(() => {
   createRoot(document.getElementById('root')!).render(
     <StrictMode>
       <App />
     </StrictMode>,
   );
-// });
+});

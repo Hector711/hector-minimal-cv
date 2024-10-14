@@ -16,7 +16,8 @@ footer#body-footer {
 
 #footer-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   max-width: $width;
   a {
@@ -35,19 +36,11 @@ footer#body-footer {
     align-items: center;
     width: 100%;
   }
-  svg.icons.fill {
+  svg.icons {
     width: 1.2rem;
     height: 1.2rem;
-    fill: $black-2;
-  }
-  svg.icons.stroke {
-    width: 1.2rem;
-    height: 1.2rem;
-    stroke: $black-2;
   }
 }
 #footer-container * {
   display: flex;
-  justify-content: center;
-  align-items: center;
 }

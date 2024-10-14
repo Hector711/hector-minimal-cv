@@ -31,15 +31,13 @@ $pad-l: 1.2rem;
 
 $dot-size: 28px;
 
-
-
 @mixin respond-to($breakpoint) {
   @if $breakpoint == mobile {
     @media (max-width: 480px) {
       @content;
     }
   } @else if $breakpoint == tablet {
-    @media (max-width:668px) {
+    @media (max-width: 668px) {
       @content;
     }
   } @else if $breakpoint == desktop {
@@ -47,4 +45,20 @@ $dot-size: 28px;
       @content;
     }
   }
+}
+
+@mixin buttons-style {
+  border-radius: $border-s;
+  padding: 0.25rem;
+  border: $border-width solid $white-2;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+}
+@mixin buttons-style-hover {
+  background-color: $white-0 !important;
+  border: $border-width solid $white-0 !important;
+}
+
+@mixin bold-text {
+  font-weight: 600;
 }
