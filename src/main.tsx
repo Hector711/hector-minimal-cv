@@ -1,8 +1,6 @@
-import React, { Suspense } from 'react';
-import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
-
-import App from './App.jsx';
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import App from '@/App.tsx';
 
 // TYPOGRAPHY
 // Supports weights 200-900
@@ -28,16 +26,13 @@ import '@/css/section-experience.scss';
 import '@/css/comp-navbar.scss';
 import '@/css/comp-footer.scss';
 
-import { loadTranslations } from '@/i18n/i18n';
+// PAGES
+// import { loadTranslations } from '@/i18n/i18n';
 
-loadTranslations().then(() => {
-  ReactDOM.createRoot(document.getElementById('root')).render(
-    <React.StrictMode>
-      <Suspense fallback={<div>Loading...</div>}>
-        <BrowserRouter>
-          <App />
-        </BrowserRouter>
-      </Suspense>
-    </React.StrictMode>,
+// loadTranslations().then(() => {
+  createRoot(document.getElementById('root')!).render(
+    <StrictMode>
+      <App />
+    </StrictMode>,
   );
-});
+// });

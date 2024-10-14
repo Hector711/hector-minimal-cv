@@ -1,6 +1,9 @@
 build/
 coverage/
 node_modules/
+dist
+build
+.git
 
 **/.git
 **/.svn

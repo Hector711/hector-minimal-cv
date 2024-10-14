@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+@import '../_variables.scss';
 :root {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
