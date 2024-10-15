@@ -1,4 +1,3 @@
-import GitHubIcon from '@/icons/GitHubIcon';
 import HeartIcon from '@/icons/HeartIcon';
 
 export default function Footer() {
