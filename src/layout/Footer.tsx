@@ -8,12 +8,6 @@ export default function Footer() {
         <div>
           <p>Made with&nbsp;<HeartIcon />&nbsp;by Hector Guerra</p>
         </div>
-        {/* <a href='' targ   @include buttons-style;
-    &:hover {
-      @include buttons-style-hover;
-    }et='_blank'>
-          Repositorio <GitHubIcon />
-        </a> */}
       </div>
     </footer>
   );
