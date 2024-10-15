@@ -1,3 +1,5 @@
+@import '_variables.scss';
+
 section#languages {
   ul#languages-container {
     display: grid;
@@ -26,5 +28,9 @@ article.language-cards {
     align-items: center;
     bottom: 0;
     font-size: 1.1rem;
+  }
+  .icons {
+    width: 30px;
+    height: 30px;
   }
 }
