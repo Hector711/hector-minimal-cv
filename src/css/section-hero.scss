@@ -54,17 +54,19 @@ footer#social-links {
     transition: all 0.3s ease-in-out;
     width: 2rem;
     height: 2rem;
-    @include buttons-style;
+    @include social-links-style;
+    @include hover-effect;
     &:hover {
-      @include buttons-style-hover;
+      @include hover-effect-hover;
     }
   }
   a#web-page, a#calendly-btn {
     width: 100% !important;
     text-wrap: nowrap;
-    @include buttons-style;
+    @include social-links-style;
+    @include hover-effect;
     &:hover {
-      @include buttons-style-hover;
+      @include hover-effect-hover;
     }
     p {
       @include bold-text;

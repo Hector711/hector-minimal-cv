@@ -47,17 +47,21 @@ $dot-size: 28px;
   }
 }
 
-@mixin buttons-style {
+@mixin social-links-style {
   border-radius: $border-s;
   padding: 0.25rem;
-  border: $border-width solid $white-2;
-  transition: all 0.3s ease-in-out;
   text-align: center;
 }
-@mixin buttons-style-hover {
+
+@mixin hover-effect {
+  border: $border-width solid $white-2;
+  transition: all 0.3s ease-in-out;
+}
+@mixin hover-effect-hover {
   background-color: $white-0 !important;
   border: $border-width solid $white-0 !important;
 }
+
 
 @mixin bold-text {
   font-weight: 600;

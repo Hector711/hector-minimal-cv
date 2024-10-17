@@ -19,7 +19,6 @@ export default function Projects() {
               <a
                 href={url}
                 target='_blank'
-                className='hoverr'
                 title={`Ver el proyecto ${name}`}
               >
                 <header>

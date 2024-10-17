@@ -19,6 +19,10 @@ li.project-cards {
     height: 100%;
     border: $border-width solid $white-2;
     overflow: hidden;
+    @include hover-effect;
+    &:hover {
+      @include hover-effect-hover;
+    }
   }
   a
   header {
