@@ -7,7 +7,7 @@ declare global {
 
 export default function CalendlyButton({ children, className }: { children: any, className?: string }) {
   const eventName = "asesoria-gratuita-1-a-1";
-  const backgroundColor = "101010";
+  const backgroundColor = "292929";
   const textColor = "ffffff";
   const primaryColor = "16d378";
   const cookiesBanner = 1;
