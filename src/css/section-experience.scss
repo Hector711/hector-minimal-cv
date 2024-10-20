@@ -1,5 +1,6 @@
 @import '_variables.scss';
 
+
 section#experience {
   ul#experience-container {
     display: flex;
@@ -8,6 +9,9 @@ section#experience {
     li {
       display: flex;
     }
+  }
+  * {
+    border: 0.5px solid rgb(157, 60, 60);
   }
 }
 article.experience-cards {

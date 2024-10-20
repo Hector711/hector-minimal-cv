@@ -59,7 +59,8 @@ label {
 svg#dot {
   max-width: $dot-size;
   width: 100%;
-  height: max-content;
+  height: auto;
+  max-height: $dot-size;
 }
 
 
