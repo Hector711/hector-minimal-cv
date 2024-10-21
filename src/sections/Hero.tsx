@@ -24,6 +24,7 @@ export default function Hero() {
 
   const basics = i18n.getResourceBundle(language, 'basics');
   const basicsData = Object.values(basics)[0] as Basics;
+  console.log(basicsData);
 
   const SOCIAL_ICONS: SocialIconsType = {
     Instagram: <InstagramIcon />,
@@ -84,8 +85,8 @@ export default function Hero() {
             <a
               id='web-page'
               target='_blank'
-              title='Visitar la pagina web de '
-              href={basics.web_url}
+              title={`Visitar la pagina web de ${basicsData.name}`}
+              href={basicsData.web_url ?? '#'}
             >
               <p>{t('translations:web_page')}</p>
             </a>

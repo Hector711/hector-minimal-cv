@@ -8,7 +8,6 @@ export default function Experience() {
   const language = i18n.language;
   const workObject = i18n.getResourceBundle(language, 'work');
   const work = Object.values(workObject) as WorkTypes[];
-  console.log(work);
 
   return (
     <ModelSection title={t('translations:work')} id='experience'>

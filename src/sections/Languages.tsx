@@ -8,7 +8,6 @@ export default function Languages() {
   const language = i18n.language;
   const languagesObject = i18n.getResourceBundle(language, 'languages');
   const languages = Object.values(languagesObject) as LanguagesTypes[];
-  console.log(languages);
 
   return (
     <ModelSection title={t('translations:languages')} id='languages'>
