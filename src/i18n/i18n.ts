@@ -44,7 +44,7 @@ export async function loadTranslations(): Promise<void> {
   const dataSupabase = data as SupabaseData;
 
   // if (dataSupabase) {
-    console.log('ALL DATA--> ', dataSupabase);
+    // console.log('ALL DATA--> ', dataSupabase);
   // }
 
   const i18nResources = {

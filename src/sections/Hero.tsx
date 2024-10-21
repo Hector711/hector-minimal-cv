@@ -24,7 +24,6 @@ export default function Hero() {
 
   const basics = i18n.getResourceBundle(language, 'basics');
   const basicsData = Object.values(basics)[0] as Basics;
-  console.log(basicsData);
 
   const SOCIAL_ICONS: SocialIconsType = {
     Instagram: <InstagramIcon />,
