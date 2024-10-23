@@ -1,27 +1,7 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import supabase from '@/api/supabase.ts';
-
-interface DataItem {
-  id: any;
-  dni: string;
-  lng: 'EN' | 'ES';
-  city: string;
-  name: string;
-}
-
-type ResourceKeys = 'translations' | 'basics' | 'education' | 'languages' | 'profiles' | 'projects' | 'work';
-
-type LanguageKeys = 'EN' | 'ES';
-
-interface SupabaseData {
-  basics: DataItem[];
-  education: DataItem[];
-  languages: DataItem[];
-  profiles: DataItem[];
-  projects: DataItem[];
-  work: DataItem[];
-}
+import { ResourceKeys, LanguageKeys, SupabaseData } from '@/types';
 
 export default i18n.use(initReactI18next).init({
   resources: {},
@@ -43,9 +23,9 @@ export async function loadTranslations(): Promise<void> {
 
   const dataSupabase = data as SupabaseData;
 
-  // if (dataSupabase) {
-    // console.log('ALL DATA--> ', dataSupabase);
-  // }
+  if (dataSupabase) {
+    console.log('ALL DATA--> ', dataSupabase);
+  }
 
   const i18nResources = {
     EN: {
@@ -64,6 +44,10 @@ export async function loadTranslations(): Promise<void> {
         .map(({ id, lng, ...rest }) => rest),
       education: dataSupabase.education
         .filter(item => item.lng === 'EN')
+        .sort(
+          (a, b) =>
+            new Date(b.end_date).getTime() - new Date(a.end_date).getTime(),
+        )
         .map(({ id, lng, ...rest }) => rest),
       languages: dataSupabase.languages
         .filter(item => item.lng === 'EN')
@@ -94,6 +78,10 @@ export async function loadTranslations(): Promise<void> {
         .map(({ id, lng, ...rest }) => rest),
       education: dataSupabase.education
         .filter(item => item.lng === 'ES')
+        .sort(
+          (a, b) =>
+            new Date(b.end_date).getTime() - new Date(a.end_date).getTime(),
+        )
         .map(({ id, lng, ...rest }) => rest),
       languages: dataSupabase.languages
         .filter(item => item.lng === 'ES')
@@ -103,9 +91,14 @@ export async function loadTranslations(): Promise<void> {
         .map(({ id, lng, ...rest }) => rest),
       projects: dataSupabase.projects
         .filter(item => item.lng === 'ES')
+        .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
         .map(({ id, lng, ...rest }) => rest),
       work: dataSupabase.work
         .filter(item => item.lng === 'ES')
+        .sort(
+          (a, b) =>
+            new Date(b.start_date).getTime() - new Date(a.start_date).getTime(),
+        )
         .map(({ id, lng, ...rest }) => rest),
     },
   };
@@ -114,7 +107,13 @@ export async function loadTranslations(): Promise<void> {
     const langKey = lang as LanguageKeys;
     Object.keys(i18nResources[langKey]).forEach(ns => {
       const nsKey = ns as ResourceKeys;
-      i18n.addResourceBundle(langKey, nsKey, i18nResources[langKey][nsKey], true, true);
+      i18n.addResourceBundle(
+        langKey,
+        nsKey,
+        i18nResources[langKey][nsKey],
+        true,
+        true,
+      );
     });
   });
 }
