@@ -12,10 +12,12 @@ import toast, { Toaster } from 'react-hot-toast';
 import { useTranslation } from 'react-i18next';
 import { Basics, SocialIconsType, ProfileType } from '@/types';
 import CalendlyButton from '@/components/CalendlyWidget';
+
 export default function Hero() {
-  const notify = () =>
-    toast(`Email copiado al portapapeles: ${t('basics:email')}`);
   const { t, i18n } = useTranslation();
+  
+  const notify = () =>
+    toast(`Email copiado al portapapeles: ${basicsData.email}`);
 
   const language = i18n.language;
 
@@ -24,6 +26,7 @@ export default function Hero() {
 
   const basics = i18n.getResourceBundle(language, 'basics');
   const basicsData = Object.values(basics)[0] as Basics;
+  console.log({basicsData});
 
   const SOCIAL_ICONS: SocialIconsType = {
     Instagram: <InstagramIcon />,
