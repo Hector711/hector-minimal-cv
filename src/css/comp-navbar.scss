@@ -19,28 +19,23 @@ nav {
     @include respond-to(tablet) {
       justify-content: center;
     }
-  }
-
-  button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    padding: 0 10px;
-    height: 35px;
-    border-radius: 6px;
-    transition: all 0.3s ease;
-    width: 140px;
-    font-size: 0.9rem;
-    border: 1px solid;
-    font-weight: 600;
-    .icons {
-      width: 18px;
-      height: 18px;
+    button, a {
+      @include button-style;
+      @include hover-effect;
+      gap: 10px;
+      padding: 5px 20px;
+      font-weight: 600;
+      &:hover {
+        @include hover-effect-hover;
+      }
+      .icons {
+        width: 18px;
+        height: 18px;
+      }
     }
   }
-}
 
+}
 
 #flags {
   display: flex;

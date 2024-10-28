@@ -133,3 +133,8 @@ export interface SupabaseData {
   projects: ProjectsItem[];
   work: WorkItem[];
 }
+
+export interface IconProps {
+  className?: string;
+  id?: string;
+}

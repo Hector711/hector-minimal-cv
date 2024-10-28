@@ -4,12 +4,10 @@ $green: #02ca34;
 
 $black-0: #000000;
 $black-1: #3a3a3a;
-// $black-1: #292929;
 $black-2: #696969;
-
-$white-0: #f3f3f3;
-$white-1: #e6e6e6;
 $white-2: #909090;
+$white-1: #e6e6e6;
+$white-0: #f3f3f3;
 
 $background-color: $white-1;
 $color: $black-2;
@@ -47,18 +45,22 @@ $dot-size: 28px;
     }
   }
 }
-
-@mixin social-links-style {
+@mixin button-style{
   border-radius: $border-m;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0.15rem;
   text-align: center;
 }
 
+
+@mixin social-links-style {
+  @include button-style;
+  padding: 0.15rem;
+}
+
 @mixin hover-effect {
-  border: $border-width solid $black-2;
+  border: $border-width solid $white-2;
   transition: all 0.3s ease-in-out;
 }
 @mixin hover-effect-hover {

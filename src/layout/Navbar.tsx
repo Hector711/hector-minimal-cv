@@ -22,14 +22,13 @@ export default function Navbar() {
   return (
     <nav>
       <div id='nav-container'>
+        {/* <a href='#' className='resume-video' target='_blank' rel='noopener noreferrer'>
+          Video Resumen
+        </a> */}
         {LANGUAGES.map(({ code, label }) => {
           if (code !== actualLng) {
             return (
-              <button
-                key={code}
-                className='hoverr'
-                onClick={() => changeLanguage(code)}
-              >
+              <button key={code} onClick={() => changeLanguage(code)}>
                 <LanguageIcon />
                 {label}
               </button>
@@ -42,9 +41,6 @@ export default function Navbar() {
     </nav>
   );
 }
-
-
-
 
 // function LanguageSwitcher() {
 //   const { i18n } = useTranslation()

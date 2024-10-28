@@ -15,7 +15,7 @@ import CalendlyButton from '@/components/CalendlyWidget';
 
 export default function Hero() {
   const { t, i18n } = useTranslation();
-  
+
   const notify = () =>
     toast(`Email copiado al portapapeles: ${basicsData.email}`);
 
@@ -26,7 +26,7 @@ export default function Hero() {
 
   const basics = i18n.getResourceBundle(language, 'basics');
   const basicsData = Object.values(basics)[0] as Basics;
-  console.log({basicsData});
+  console.log({ basicsData });
 
   const SOCIAL_ICONS: SocialIconsType = {
     Instagram: <InstagramIcon />,
@@ -66,21 +66,36 @@ export default function Hero() {
                 />
               </>
             )}
-            {profiles.map((item, i) => {
-              const profile = item as ProfileType;
-              const Icon =
-                SOCIAL_ICONS[profile.network as keyof SocialIconsType];
-              return (
+            {t('basics:email') && (
+              <>
                 <a
-                  key={i}
-                  href={profile.url ?? '#'}
+                  href={`https://wa.me/${basicsData.whatsapp_url}` ?? '#'}
                   className='social-links'
                   target='_blank'
                   rel='noopener noreferrer'
                 >
-                  {Icon}
+                  {SOCIAL_ICONS['WhatsApp']}
                 </a>
-              );
+              </>
+            )}
+            {profiles.map((item, i) => {
+              const profile = item as ProfileType;
+              const Icon = SOCIAL_ICONS[profile.network as keyof SocialIconsType];
+              if (profile.url) {
+                return (
+                  <a
+                    key={i}
+                    href={profile.url ?? '#'}
+                    className='social-links'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                  >
+                    {Icon}
+                  </a>
+                );
+              } else {
+                return null;
+              }
             })}
           </div>
           {basicsData.web_url && (
@@ -95,7 +110,7 @@ export default function Hero() {
           )}
           {basicsData.calendly_url && (
             <CalendlyButton>
-              <p>Reservar Llamada</p>
+              <p>{t('translations:book_a_call')}</p>
             </CalendlyButton>
           )}
         </footer>

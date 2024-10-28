@@ -33,9 +33,11 @@ li.project-cards {
       margin-bottom: 4px;
       gap: 0.5rem;
     }
-
     span {
       color: $green;
+    }
+    p{
+      font-size: 0.85rem;
     }
   }
   footer {
@@ -47,8 +49,8 @@ li.project-cards {
       display: flex;
       justify-content: center;
       border-radius: 6px;
-      background: #c6c6c6;
-      font-size: 0.8rem;
+      background:#c9c9c9;
+      font-size: 0.7rem;
       font-weight: 500;
       padding: 0.2rem 0.6rem;
       display: inline-flex;

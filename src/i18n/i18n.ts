@@ -30,7 +30,7 @@ export async function loadTranslations(): Promise<void> {
   const i18nResources = {
     EN: {
       translations: {
-        reservar_llamada: 'Book a call',
+        book_a_call: 'Book a call',
         about_me: 'About me',
         projects: 'Projects',
         education: 'Education',
@@ -64,7 +64,7 @@ export async function loadTranslations(): Promise<void> {
     },
     ES: {
       translations: {
-        reservar_llamada: 'Reservar Llamada',
+        book_a_call: 'Reservar Llamada',
         about_me: 'Sobre mí',
         projects: 'Proyectos',
         education: 'Formación',
