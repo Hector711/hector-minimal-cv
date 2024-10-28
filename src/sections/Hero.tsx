@@ -69,7 +69,7 @@ export default function Hero() {
             {t('basics:email') && (
               <>
                 <a
-                  href={`https://wa.me/${basicsData.whatsapp_url}` ?? '#'}
+                  href={`https://${basicsData.whatsapp_url}` ?? '#'}
                   className='social-links'
                   target='_blank'
                   rel='noopener noreferrer'
