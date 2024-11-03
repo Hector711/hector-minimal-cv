@@ -15,10 +15,6 @@ import CalendlyButton from '@/components/CalendlyWidget';
 
 export default function Hero() {
   const { t, i18n } = useTranslation();
-
-  const notify = () =>
-    toast(`Email copiado al portapapeles: ${basicsData.email}`);
-
   const language = i18n.language;
 
   const profilesObject = i18n.getResourceBundle(language, 'profiles');
@@ -26,7 +22,15 @@ export default function Hero() {
 
   const basics = i18n.getResourceBundle(language, 'basics');
   const basicsData = Object.values(basics)[0] as Basics;
+
   console.log({ basicsData });
+  const copyEmail = () =>{
+    navigator.clipboard.writeText(basicsData.email ?? '').then(() => {
+      toast(`Email copiado al portapapeles: ${basicsData.email}`);
+    }).catch(err => {
+      console.error('Error al copiar el email: ', err);
+    });
+  };
 
   const SOCIAL_ICONS: SocialIconsType = {
     Instagram: <InstagramIcon />,
@@ -52,9 +56,9 @@ export default function Hero() {
         </span>
         <footer id='social-links'>
           <div id='social-links-container'>
-            {t('basics:email') && (
+            {basicsData.email && (
               <>
-                <button onClick={notify} className='social-links'>
+                <button onClick={copyEmail} className='social-links'>
                   {SOCIAL_ICONS['Mail']}
                 </button>
                 <Toaster
@@ -66,10 +70,10 @@ export default function Hero() {
                 />
               </>
             )}
-            {t('basics:email') && (
+            {basicsData.whatsapp_url && (
               <>
                 <a
-                  href={`https://${basicsData.whatsapp_url}` ?? '#'}
+                  href={`https://${basicsData.whatsapp_url}`}
                   className='social-links'
                   target='_blank'
                   rel='noopener noreferrer'
