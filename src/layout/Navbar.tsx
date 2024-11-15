@@ -20,7 +20,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav>
+    <nav className='no-print'>
       <div id='nav-container'>
         {/* <a href='#' className='resume-video' target='_blank' rel='noopener noreferrer'>
           Video Resumen

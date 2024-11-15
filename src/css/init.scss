@@ -71,3 +71,22 @@ svg.icons-fill {
 svg.icons-stroke {
   stroke: $black-2;
 }
+
+@media print {
+  .print {
+    display: block !important; 
+  }
+  .no-print {
+    display: none !important;
+  }
+  .model{
+    padding-block: 1rem;
+  }
+  @include print-styles;
+}
+
+@media screen {
+  .print {
+    display: none;
+  }
+}

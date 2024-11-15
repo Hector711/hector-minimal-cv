@@ -54,7 +54,11 @@ export default function Hero() {
             {basicsData.city}, {basicsData.country}.
           </h5>
         </span>
-        <footer id='social-links'>
+        <footer className='print'>
+          <p>Email: {basicsData.email}</p>
+          <p>WhatsApp: {basicsData.whatsapp_url}</p>
+        </footer>
+        <footer id='social-links' className='no-print'>
           <div id='social-links-container'>
             {basicsData.email && (
               <>

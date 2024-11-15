@@ -72,3 +72,10 @@ $dot-size: 28px;
 @mixin bold-text {
   font-weight: 600;
 }
+
+@mixin print-styles {
+  $nav-height: 1rem !important;
+  main{
+    padding-block: $nav-height;
+  }
+}
