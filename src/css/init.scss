@@ -80,7 +80,10 @@ svg.icons-stroke {
     display: none !important;
   }
   .model{
-    padding-block: 1rem;
+    // padding-block: 0.5rem;
+  }
+  #education {
+    padding-top: 7rem;
   }
   @include print-styles;
 }
