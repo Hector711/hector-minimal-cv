@@ -4,6 +4,9 @@ h1, h2 {
   color: $black-1;
 }
 /* NOMBRE DE PERFIL */
+* {
+  // border: 1px solid red;
+}
 h1 {
   font-family: 
     'Figtree Variable', 
@@ -18,23 +21,39 @@ h2 {
   font-size: 1.6rem;
   line-height: 1.5;
   font-weight: 800;
+  
+  @include respond-to(mobile) {
+    font-size: 1.3rem;
+    line-height: 1.3;
+  }
 }
 h3 {
   font-size: 1.2rem;
   font-weight: 700;
+  @include respond-to(mobile) {
+    font-size: 1rem;
+    text-wrap: pretty;
+    word-wrap: break-word;
+  }
 }
 /* TITULOS DE LOS PROYECTOS */
 h4{
   font-size: 1.1rem;
   font-weight: 750;
   color: $black-2;
+  @include respond-to(mobile) {
+    font-size: 1rem;
+
+  }
 }
 
 p {
   font-size: 1rem ;
   text-wrap: pretty;
   word-wrap: break-word;
-  // font-weight: 0;
+  @include respond-to(tablet) {
+    font-size: 0.85rem;
+  }
 }
 p.bold {
   font-weight: 650;
@@ -49,6 +68,7 @@ span {
   gap: 0.25rem;
   font-size: 1rem;
   letter-spacing: -0.01rem;
+  
 }
 
 label {
@@ -61,6 +81,10 @@ svg#dot {
   width: 100%;
   height: auto;
   max-height: $dot-size;
+  @include respond-to(mobile) {
+    max-width: 23px;
+    max-height: 23px;
+  }
 }
 
 

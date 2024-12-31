@@ -31,14 +31,17 @@ export default function Experience() {
                 <article className='experience-cards'>
                   <header>
                     <div className='title-card'>
-                      <h3>{position}</h3>&nbsp;
-                      <span id='lightWeight'>{t('translations:at')}</span>&nbsp;
-                      <a href={url ?? '#'} target='_blank' className='companies'>
-                        <h3>{company}</h3>
-                      </a>
+                      <p className='position-text'>
+                        <strong>{position}</strong>
+                        <span className='at-text'>{t('translations:at')}</span>
+                        <a href={url ?? '#'} target='_blank' className='company-link'>
+                          {company}
+                        </a>
+                      </p>
                     </div>
                     <time>
                       {startDate} - {endDate}
+
                     </time>
                   </header>
                   <p>{summary}</p>

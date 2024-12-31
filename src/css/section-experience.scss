@@ -10,6 +10,9 @@ section#experience {
       display: flex;
     }
   }
+  *{
+    // border: 1px solid red;
+  }
 }
 article.experience-cards {
   display: flex;
@@ -18,23 +21,62 @@ article.experience-cards {
   header {
     display: flex;
     width: 100%;
+    @include respond-to(mobile) {
+      align-items: start;
+      flex-direction: row;
+      gap: 0.5rem;
+    }
     div.title-card {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-start;
-      align-items: flex-start;
       width: 100%;
-      * {
-        font-size: 1.1rem;
-        white-space: nowrap;
+      
+      
+      .position-text {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.25rem;
+        align-items: center;
+        width: 100%;
+
+        strong {
+          font-weight: bold;
+          font-size: 1.1rem;
+        }
+
+        .at-text {
+          font-weight: normal;
+          font-size: 1.1rem;
+        }
+
+        .company-link {
+          font-weight: bold;
+          font-size: 1.1rem;
+          transition: all 0.3s ease-in-out;
+          
+          &:hover {
+            text-decoration: underline;
+            color: $black-0;
+          }
+        }
+
+        @include respond-to(mobile) {
+          gap: 0.15rem;
+          
+          strong, .at-text, .company-link {
+            font-size: 1rem;
+          }
+        }
       }
+      
     }
     time {
+      // border: 1px solid red;
       margin-left: auto;
       white-space: nowrap;
       @include respond-to(mobile) {
+        margin-left: 0;
         white-space: wrap;
-        text-align: right;
+        text-align: left;
       }
     }
   }
