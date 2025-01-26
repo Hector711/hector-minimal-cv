@@ -12,6 +12,7 @@ import toast, { Toaster } from 'react-hot-toast';
 import { useTranslation } from 'react-i18next';
 import { Basics, SocialIconsType, ProfileType } from '@/types';
 import CalendlyButton from '@/components/CalendlyWidget';
+import profilePic from '@/assets/profile.png';
 
 export default function Hero() {
   const { t, i18n } = useTranslation();
@@ -124,6 +125,7 @@ export default function Hero() {
         </footer>
       </div>
       <figure id='avatar'>
+        {/* <img src={profilePic} alt='Héctor Avatar' /> */}
         <img src={basicsData.image} alt='Héctor Avatar' />
       </figure>
     </ModelSection>
